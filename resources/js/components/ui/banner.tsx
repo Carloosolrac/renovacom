@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { getWidthClasses } from "@/utils/utils";
-import PrimaryLink from "./primary-link";
 import { StarIcon } from "../icons/icons";
+import PrimaryLink from "./primary-link";
 
 
 interface BannerProps {
