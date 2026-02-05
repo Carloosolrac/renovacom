@@ -1,4 +1,5 @@
 import Header from '@/components/layout/header';
+import LayoutForm from '@/components/sections/layout-form';
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -14,8 +15,10 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
             </div>
 
             <Header />
-            <main className="flex-1">{children}</main>
-            <footer></footer>
+            <main className="flex-1">
+                {children}
+                <LayoutForm />
+            </main>
         </div>
     );
 };
