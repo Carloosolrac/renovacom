@@ -1,5 +1,6 @@
 import { StarIcon } from '@/components/icons/icons';
 import HomeSectionProblem from '@/components/sections/home-section-problem';
+import ArticleDivision from '@/components/ui/article-division';
 import Banner from '@/components/ui/banner';
 import CardAccordeon from '@/components/ui/card-accordeon';
 import CardAccordeonContainer from '@/components/ui/card-accordeon-container';
@@ -8,6 +9,7 @@ import CardSlideContainer from '@/components/ui/card-slide-container';
 import Paragraph from '@/components/ui/paragraph';
 import PrimaryBlackLink from '@/components/ui/primary-black-link';
 import PrimaryLink from '@/components/ui/primary-link';
+import PrimaryWhiteLink from '@/components/ui/primary-white-link';
 import SecondaryLink from '@/components/ui/secondary-link';
 import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
@@ -113,6 +115,62 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                         image="/assets/home/background-card-slider-1.png"
                     />
                 </CardSlideContainer>
+            </section>
+            <section className="space-y-5 py-10">
+                <div className={getWidthClasses()}>
+                    <Title>Otros servicios</Title>
+                </div>
+
+                <div role="list">
+                    {[
+                        'Seguimiento a la consturcción',
+                        'DESARROLLO DE GEMEOS VIRTUALES PARA LA DIGITALIZACIÓN DE ACTIVOS',
+                        'SERVICIOS DE INGENIERÍA Y CONSULTORÍA A MEDIDA',
+                    ].map((item, index) => (
+                        <div
+                            role="item"
+                            key={index}
+                            className="group hover:bg-black-renovacom"
+                        >
+                            <div
+                                className={cn(
+                                    getWidthClasses(),
+                                    'flex flex-col items-center justify-between gap-4 border-b-2 border-black-renovacom py-8 text-black-renovacom group-hover:text-white lg:flex-row lg:gap-0',
+                                )}
+                            >
+                                <h3 className="my-4 font-space-grotesk text-3xl uppercase lg:max-w-4/6 lg:text-4xl">{item}</h3>
+
+                                <PrimaryWhiteLink
+                                    role="button"
+                                    className="hidden group-hover:flex"
+                                >
+                                    Conoce más
+                                </PrimaryWhiteLink>
+
+                                <SecondaryLink
+                                    role="button"
+                                    className="group-hover:hidden lg:hidden"
+                                >
+                                    Conoce más
+                                </SecondaryLink>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className={cn(getWidthClasses(), 'flex flex-col items-center justify-end gap-4 lg:flex-row')}>
+                    <SecondaryLink>Cononce nuestros servicios</SecondaryLink>
+                    <PrimaryBlackLink>Hablemos</PrimaryBlackLink>
+                </div>
+            </section>
+
+            <section className={cn('space-y-5 py-10', getWidthClasses())}>
+                <Title>Transformamos datos precisos en decisiones estratégicas</Title>
+                <ArticleDivision
+                    leftText="Nuestro servicio entrega precisión en la obtención y análisis de datos para una toma de decisiones fundamentada. Esto se traduce en un plan de mantenimiento optimizado que protege su inversión."
+                    rightText="Nuestro equipo cuenta con más de 12 años de experiencia en proyectos solares, eólicos y BESS, combinando criterio profesional y tecnología de vanguardia."
+                    image="/assets/home/background-article-transform.png"
+                />
             </section>
         </>
     );

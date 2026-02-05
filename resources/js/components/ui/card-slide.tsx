@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import Paragraph from './paragraph';
-import SecondaryLink from './secondary-link';
 import PrimaryWhiteLink from './primary-white-link';
 
 export interface CardSlideProps {
