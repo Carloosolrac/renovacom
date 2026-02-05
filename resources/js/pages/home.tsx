@@ -3,6 +3,8 @@ import HomeSectionProblem from '@/components/sections/home-section-problem';
 import Banner from '@/components/ui/banner';
 import CardAccordeon from '@/components/ui/card-accordeon';
 import CardAccordeonContainer from '@/components/ui/card-accordeon-container';
+import CardSlide from '@/components/ui/card-slide';
+import CardSlideContainer from '@/components/ui/card-slide-container';
 import Paragraph from '@/components/ui/paragraph';
 import PrimaryBlackLink from '@/components/ui/primary-black-link';
 import PrimaryLink from '@/components/ui/primary-link';
@@ -98,6 +100,19 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                     Sistema integral de captura de datos en activos eólicos y fotovoltaicos, con procesamiento mediante IA que transforma información
                     técnica en insumos accionables para una gestión eficiente de O&M.
                 </Paragraph>
+
+                <CardSlideContainer>
+                    <CardSlide
+                        title="INSPECCIÓN SOLAR"
+                        description="Detectamos fallas a nivel de celda mediante termografía y combinamos medición de suciedad en un solo vuelo para estimar pérdidas y optimizar mantenimiento."
+                        image="/assets/home/background-card-slider-1.png"
+                    />
+                    <CardSlide
+                        title="INSPECCIÓN SOLAR"
+                        description="Detectamos fallas a nivel de celda mediante termografía y combinamos medición de suciedad en un solo vuelo para estimar pérdidas y optimizar mantenimiento."
+                        image="/assets/home/background-card-slider-1.png"
+                    />
+                </CardSlideContainer>
             </section>
         </>
     );
