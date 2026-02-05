@@ -22,7 +22,7 @@ const Banner = ({
     backgroundImage,
 }: BannerProps) =>{
     return(
-        <section className={cn('flex h-lvh min-h-96 items-center justify-center  pt-20 xl:min-h-200 bg-no-repeat bg-cover bg-center xl:bg-size-[130%] 2xl:bg-size-[150%]')} style={{
+        <section className={cn('flex h-lvh mx-auto min-h-96 items-center justify-center pt-20 xl:min-h-200 bg-no-repeat bg-cover bg-center xl:bg-size-[130%] 2xl:bg-size-[150%] ')} style={{
             backgroundImage: `url(${backgroundImage})`,
          backgroundPosition:'bottom',
         }}>
