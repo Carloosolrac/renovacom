@@ -1,6 +1,7 @@
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
-import { Link, usePage } from '@inertiajs/react';
+import { Link } from '@inertiajs/react';
 import { useCallback, useState } from 'react';
+import useNavigation from '@/hooks/useNavigation';
 import { cn } from '@/lib/utils';
 import { home } from '@/routes';
 import { getWidthClasses } from '@/utils/utils';
@@ -8,29 +9,11 @@ import { InstagramIcon, LinkedInIcon } from '../icons/logos';
 import PrimaryLink from '../ui/primary-link';
 
 const Header = () => {
-    const { url } = usePage();
+    const { current, navigationItems } = useNavigation();
 
     const backgroundColorBasedUrl = useCallback(() => {
-        return url !== home.get().url ? 'bg-transparent border-white border-2' : 'bg-gray-renovacom';
-    }, [url]);
-
-    const navigationItems = [
-        {
-            name: 'Inicio',
-            href: home.get().url,
-            isCurrent: url === home.get().url,
-        },
-        {
-            name: 'Metodología',
-            href: '#methodology',
-            isCurrent: url === '#methodology',
-        },
-        {
-            name: 'Servicios',
-            href: '#services',
-            isCurrent: url === '#services',
-        },
-    ];
+        return current !== home.get().url ? 'bg-transparent border-white border-2' : 'bg-gray-renovacom';
+    }, [current]);
 
     const [toggleMenu, setToggleMenu] = useState(false);
     const handleToggleMenu = () => {

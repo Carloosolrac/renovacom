@@ -1,6 +1,6 @@
+import PrimaryBlackLink from '@/components/ui/primary-black-link';
 import { cn } from '@/lib/utils';
 import { getWidthClasses } from '@/utils/utils';
-import PrimaryBlackLink from '@/components/ui/primary-black-link';
 
 const LayoutForm = () => {
     return (

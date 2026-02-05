@@ -11,7 +11,6 @@ import CardStatisticsContainer from '@/components/ui/card-statistics-container';
 import InfiniteSlider from '@/components/ui/infinite-slider';
 import Paragraph from '@/components/ui/paragraph';
 import PrimaryBlackLink from '@/components/ui/primary-black-link';
-import PrimaryLink from '@/components/ui/primary-link';
 import PrimaryWhiteLink from '@/components/ui/primary-white-link';
 import SecondaryLink from '@/components/ui/secondary-link';
 import Title from '@/components/ui/title';

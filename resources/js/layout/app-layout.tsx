@@ -1,3 +1,4 @@
+import Footer from '@/components/layout/footer';
 import Header from '@/components/layout/header';
 import LayoutForm from '@/components/sections/layout-form';
 
@@ -19,6 +20,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                 {children}
                 <LayoutForm />
             </main>
+            <Footer />
         </div>
     );
 };
