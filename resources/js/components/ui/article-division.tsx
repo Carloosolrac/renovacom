@@ -7,7 +7,7 @@ interface ArticleDivisionProps {
 const ArticleDivision = ({ image, leftText, rightText }: ArticleDivisionProps) => {
     return (
         <article
-            className="relative max-h-200 w-full rounded-renovacom bg-cover bg-center lg:h-200"
+            className="relative max-h-200 w-full overflow-hidden rounded-renovacom bg-cover bg-center lg:h-200"
             style={{
                 backgroundImage: `url(${image})`,
             }}

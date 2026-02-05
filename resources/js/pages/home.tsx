@@ -6,6 +6,8 @@ import CardAccordeon from '@/components/ui/card-accordeon';
 import CardAccordeonContainer from '@/components/ui/card-accordeon-container';
 import CardSlide from '@/components/ui/card-slide';
 import CardSlideContainer from '@/components/ui/card-slide-container';
+import CardStatistics from '@/components/ui/card-statistics';
+import CardStatisticsContainer from '@/components/ui/card-statistics-container';
 import Paragraph from '@/components/ui/paragraph';
 import PrimaryBlackLink from '@/components/ui/primary-black-link';
 import PrimaryLink from '@/components/ui/primary-link';
@@ -171,6 +173,32 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                     rightText="Nuestro equipo cuenta con más de 12 años de experiencia en proyectos solares, eólicos y BESS, combinando criterio profesional y tecnología de vanguardia."
                     image="/assets/home/background-article-transform.png"
                 />
+            </section>
+            <section className="bg-black-renovacom py-10">
+                <CardStatisticsContainer className={getWidthClasses()}>
+                    {[
+                        {
+                            icon: '/assets/home/icons/statistic-light.png',
+                            title: '+70 MWP',
+                            description: 'Capacidad inspeccionada por día en plantas solares.',
+                        },
+                        {
+                            icon: '/assets/home/icons/statistic-up.png',
+                            title: '48h',
+                            description: 'Tiempo de entrega de reportes.',
+                        },
+                        {
+                            icon: '/assets/home/icons/statistic-time.png',
+                            title: '35 min',
+                            description: 'Tiempo de inspección por aerogenerador.',
+                        },
+                    ].map((item, index) => (
+                        <CardStatistics
+                            key={index}
+                            {...item}
+                        />
+                    ))}
+                </CardStatisticsContainer>
             </section>
         </>
     );
