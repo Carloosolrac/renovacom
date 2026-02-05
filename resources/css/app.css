@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-
+@import './animations.css';
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
@@ -75,4 +75,8 @@
 
     /* Border Radius */
     --radius-renovacom: 35px;
+    --radius-renovacom-xl: 70px;
+
+    /* Width */
+    --spacing-10xl: 2420px;
 }
