@@ -8,6 +8,7 @@ import CardSlide from '@/components/ui/card-slide';
 import CardSlideContainer from '@/components/ui/card-slide-container';
 import CardStatistics from '@/components/ui/card-statistics';
 import CardStatisticsContainer from '@/components/ui/card-statistics-container';
+import InfiniteSlider from '@/components/ui/infinite-slider';
 import Paragraph from '@/components/ui/paragraph';
 import PrimaryBlackLink from '@/components/ui/primary-black-link';
 import PrimaryLink from '@/components/ui/primary-link';
@@ -199,6 +200,24 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                         />
                     ))}
                 </CardStatisticsContainer>
+            </section>
+            <section className={cn('py-10', getWidthClasses())}>
+                <InfiniteSlider
+                    items={[
+                        {
+                            src: '/assets/logos/bbc.png',
+                            alt: 'BBC Logo',
+                        },
+                        {
+                            src: '/assets/logos/deloitte.png',
+                            alt: 'Deloitte Logo',
+                        },
+                        {
+                            src: '/assets/logos/unilever.png',
+                            alt: 'Unilever Logo',
+                        },
+                    ]}
+                />
             </section>
         </>
     );

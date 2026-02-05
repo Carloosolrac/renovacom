@@ -1,6 +1,6 @@
 import { Children, cloneElement, type DetailedHTMLProps, type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
-import { CardStatisticsProps } from './card-statistics';
+import type { CardStatisticsProps } from './card-statistics';
 
 const CardStatisticsContainer = (props: DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => {
     const { className, ...rest } = props;
@@ -12,7 +12,7 @@ const CardStatisticsContainer = (props: DetailedHTMLProps<HTMLAttributes<HTMLDiv
         >
             {Children.map(props.children, (child, index) =>
                 cloneElement(child as React.ReactElement<Partial<CardStatisticsProps>>, {
-                    delay: (index + 1) * 300,
+                    delay: (index + 1) * 100,
                 }),
             )}
         </div>
