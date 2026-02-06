@@ -26,7 +26,7 @@ const Header = () => {
                 className={cn(
                     backgroundColorBasedUrl(),
                     getWidthClasses(),
-                    'absolute right-1/2 my-5 flex translate-x-1/2 items-center justify-between rounded-4xl p-3 backdrop-blur-lg lg:rounded-renovacom lg:p-5 lg:py-6',
+                    'absolute right-1/2 z-50 my-5 flex translate-x-1/2 items-center justify-between rounded-4xl p-3 backdrop-blur-lg lg:rounded-renovacom lg:p-5 lg:py-6',
                 )}
             >
                 <img
@@ -47,6 +47,8 @@ const Header = () => {
                                 )}
                             >
                                 <Link
+                                    prefetch={true}
+                                    cacheFor={'10s'}
                                     viewTransition={true}
                                     href={item.href}
                                 >

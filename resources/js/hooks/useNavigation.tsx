@@ -1,5 +1,5 @@
 import { usePage } from '@inertiajs/react';
-import { home } from '@/routes';
+import { home, metodologia, servicios } from '@/routes';
 
 const useNavigation = () => {
     const { url } = usePage();
@@ -12,13 +12,13 @@ const useNavigation = () => {
         },
         {
             name: 'Metodología',
-            href: '#methodology',
-            isCurrent: url === '#methodology',
+            href: metodologia.get().url,
+            isCurrent: url === metodologia.get().url,
         },
         {
             name: 'Servicios',
-            href: '#services',
-            isCurrent: url === '#services',
+            href: servicios.get().url,
+            isCurrent: url === servicios.get().url,
         },
     ];
 
