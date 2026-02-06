@@ -1,6 +1,8 @@
 import HTMLReactParser from 'html-react-parser/lib/index';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import CardSimple from './card-simple';
+import CardSimpleContainer from './card-simple-container';
 import Paragraph from './paragraph';
 
 interface ArticlesSelectorProps {
@@ -10,6 +12,11 @@ interface ArticlesSelectorProps {
         icon: string;
         image: string;
         precontent?: string;
+        deliveries?: Array<{
+            icon: string;
+            title: string;
+            description: string;
+        }>;
     }>;
 }
 
@@ -46,37 +53,51 @@ const ArticlesSelector = ({ items }: ArticlesSelectorProps) => {
                     </button>
                 ))}
             </div>
-            <Paragraph>{items[selectedArticle]?.precontent}</Paragraph>
-            <div
-                role="article"
-                className="relative h-150 w-full overflow-hidden rounded-renovacom bg-cover bg-center"
-                style={{
-                    backgroundImage: `url('${items[selectedArticle].image}')`,
-                }}
-            >
-                <div className="absolute top-30 left-0 flex h-full w-[110%] flex-col">
-                    {/* F */}
-                    <div className="flex min-h-105 snap-x snap-proximity gap-5 overflow-scroll p-2.5 lg:overflow-hidden">
-                        <div className="flex h-100 min-w-5/6 snap-center items-end rounded-renovacom bg-gray-renovacom p-5 lg:w-5/6 lg:min-w-auto">
-                            <div className="font-space-grotesk text-4xl leading-14 font-semibold text-white uppercase lg:w-5/6 lg:text-5xl">
-                                {HTMLReactParser(items[selectedArticle].title)}
+            <div>
+                <Paragraph>{items[selectedArticle]?.precontent}</Paragraph>
+                <div
+                    role="article"
+                    className="relative h-150 w-full overflow-hidden rounded-renovacom bg-cover bg-center"
+                    style={{
+                        backgroundImage: `url('${items[selectedArticle].image}')`,
+                    }}
+                >
+                    <div className="absolute top-30 left-0 flex h-full w-[110%] flex-col">
+                        {/* F */}
+                        <div className="flex min-h-105 snap-x snap-proximity gap-5 overflow-scroll p-2.5 lg:overflow-hidden">
+                            <div className="flex h-100 min-w-5/6 snap-center items-end rounded-renovacom bg-gray-renovacom p-5 lg:w-5/6 lg:min-w-auto">
+                                <div className="font-space-grotesk text-4xl leading-14 font-semibold text-white uppercase lg:w-5/6 lg:text-5xl">
+                                    {HTMLReactParser(items[selectedArticle].title)}
+                                </div>
+                            </div>
+
+                            <div className="flex h-100 min-w-5/6 snap-center items-end rounded-renovacom bg-gray-renovacom p-5 lg:w-5/6 lg:min-w-auto">
+                                <div className="max-w-5/6 text-lg leading-8 text-white lg:max-w-2/3 lg:text-xl">
+                                    {HTMLReactParser(items[selectedArticle].content)}
+                                </div>
                             </div>
                         </div>
 
-                        <div className="flex h-100 min-w-5/6 snap-center items-end rounded-renovacom bg-gray-renovacom p-5 lg:w-5/6 lg:min-w-auto">
-                            <div className="max-w-5/6 text-lg leading-8 text-white lg:max-w-2/3 lg:text-xl">
-                                {HTMLReactParser(items[selectedArticle].content)}
-                            </div>
+                        {/* S */}
+                        <div className="flex min-h-105 gap-5 p-2.5">
+                            <div className="h-100 w-full min-w-5/6 rounded-renovacom bg-gray-renovacom lg:w-5/6 lg:min-w-auto"></div>
+                            <div className="h-100 w-full min-w-5/6 rounded-renovacom bg-gray-renovacom lg:w-5/6 lg:min-w-auto"></div>
                         </div>
-                    </div>
-
-                    {/* S */}
-                    <div className="flex min-h-105 gap-5 p-2.5">
-                        <div className="h-100 w-full min-w-5/6 rounded-renovacom bg-gray-renovacom lg:w-5/6 lg:min-w-auto"></div>
-                        <div className="h-100 w-full min-w-5/6 rounded-renovacom bg-gray-renovacom lg:w-5/6 lg:min-w-auto"></div>
                     </div>
                 </div>
             </div>
+
+            <h3 className="font-space-grotesk text-4xl font-medium text-black-renovacom uppercase">Qué entregamos</h3>
+            <CardSimpleContainer>
+                {items[selectedArticle].deliveries?.map((delivery, index) => (
+                    <CardSimple
+                        key={index}
+                        icon={delivery.icon}
+                        title={delivery.title}
+                        description={delivery.description}
+                    />
+                )) || []}
+            </CardSimpleContainer>
         </div>
     );
 };
