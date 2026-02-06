@@ -30,7 +30,7 @@ const Home = () => {
                 buttonText="Hablemos"
                 characteristics={['Inteligencia operativa para activos renovables', 'Sistema de adquisición de datos autónoma']}
             />
-            <section className={cn(getWidthClasses(), 'bg-white py-10')}>
+            <section className={cn(getWidthClasses(), 'bg-white')}>
                 <ul
                     role="list"
                     className="flex flex-col flex-wrap items-center justify-around gap-8 text-3xl text-black-renovacom md:flex-row"
@@ -55,39 +55,39 @@ const Home = () => {
 
             <HomeSectionProblem />
 
-            <section className={cn(getWidthClasses(), 'py-10')}>
+            <section className={cn(getWidthClasses())}>
                 <Title>Un flujo de trabajo diseñado para convertir datos en decisiones operativas</Title>
 
                 <CardAccordeonContainer>
                     <CardAccordeon
-                        background="/assets/home/background-section-card-dron.png"
-                        icon={'/assets/home/icons/drone.png'}
+                        background="/assets/captura-de-datos.png"
+                        icon={'/assets/icons/drone.png'}
                         title={'Captura autónoma de datos'}
                         description={
                             'Datos precisos desde el terreno, sin riesgos operativos. <br/> <br/> Realizamos vuelos autónomos y repetibles que aseguran cobertura total del activo y datos consistentes, sin trabajos en altura ni detenciones de planta.'
                         }
                     />
                     <CardAccordeon
-                        background="/assets/home/background-section-card-dron.png"
+                        background="/assets/analisis-con-ia.png"
                         title={'Análisis de Datos con IA'}
                         description="Detectamos lo crítico y priorizamos lo relevante. 
                         Procesamos grandes volúmenes de información mediante inteligencia artificial para identificar y clasificar fallas según tipo y severidad."
-                        icon={'/assets/home/icons/ai.png'}
+                        icon={'/assets/icons/ai.png'}
                     />
                     <CardAccordeon
-                        background="/assets/home/background-section-card-dron.png"
+                        background="/assets/validacion-tecnica.png"
                         title="Validación Humana"
                         description="Tecnología respaldada por criterio profesional.
 
 Nuestros ingenieros revisan y validan los hallazgos, asegurando diagnósticos confiables y recomendaciones con sustento técnico real."
-                        icon="/assets/home/icons/eye.png"
+                        icon="/assets/icons/eye.png"
                     />
                     <CardAccordeon
-                        background="/assets/home/background-section-card-dron.png"
+                        background="/assets/resultados-accionables.png"
                         title="Resultados Accionables e Integrables"
                         description="Información lista para decidir y actuar.
 Entregamos reportes claros y datos estructurados, compatibles con sus plataformas de gestión, para optimizar la planificación de O&M."
-                        icon="/assets/home/icons/dashboard.png"
+                        icon="/assets/icons/dashboard.png"
                     />
                 </CardAccordeonContainer>
 
@@ -97,7 +97,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </div>
             </section>
 
-            <section className={cn('space-y-5 py-10', getWidthClasses())}>
+            <section className={cn('space-y-14', getWidthClasses())}>
                 <Paragraph className="text-center font-bold">Inspecciones técnicas avanzadas</Paragraph>
                 <Title className="text-center">Soluciones de inspección para reducir riesgos y aumentar rendimiento</Title>
                 <Paragraph className="mx-auto text-center lg:max-w-4/6">
@@ -118,7 +118,8 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                     />
                 </CardSlideContainer>
             </section>
-            <section className="space-y-5 py-10">
+
+            <section className="space-y-14">
                 <div className={getWidthClasses()}>
                     <Title>Otros servicios</Title>
                 </div>
@@ -166,7 +167,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </div>
             </section>
 
-            <section className={cn('space-y-5 py-10', getWidthClasses())}>
+            <section className={cn('space-y-14', getWidthClasses())}>
                 <Title>Transformamos datos precisos en decisiones estratégicas</Title>
                 <ArticleDivision
                     leftText="Nuestro servicio entrega precisión en la obtención y análisis de datos para una toma de decisiones fundamentada. Esto se traduce en un plan de mantenimiento optimizado que protege su inversión."
@@ -174,7 +175,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                     image="/assets/home/background-article-transform.png"
                 />
             </section>
-            <section className="bg-black-renovacom py-10">
+            <section className="bg-black-renovacom">
                 <CardStatisticsContainer className={getWidthClasses()}>
                     {[
                         {
@@ -200,7 +201,8 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                     ))}
                 </CardStatisticsContainer>
             </section>
-            <section className={cn('py-10', getWidthClasses())}>
+
+            <section className={cn(getWidthClasses())}>
                 <InfiniteSlider
                     items={[
                         {

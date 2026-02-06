@@ -40,7 +40,7 @@ const Methodology = () => {
                 overlay={true}
             />
 
-            <section className={cn(getWidthClasses(), 'space-y-5 py-10')}>
+            <section className={cn(getWidthClasses(), 'space-y-14')}>
                 <Title>De la Captura a la Decisión: Nuestro Proceso de Ingeniería de Datos</Title>
                 <CardAccordeonDownContainer>
                     <CardAccordeonDown
@@ -132,7 +132,7 @@ const Methodology = () => {
                 </CardAccordeonDownContainer>
             </section>
 
-            <section className={cn(getWidthClasses(), 'space-y-5 py-10')}>
+            <section className={cn(getWidthClasses(), 'space-y-14')}>
                 <Title>Transformamos datos precisos en decisiones estratégicas</Title>
                 <ArticleDivision
                     image="/assets/methodology/background-article-division.png"
