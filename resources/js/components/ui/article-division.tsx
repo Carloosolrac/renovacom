@@ -1,3 +1,5 @@
+import HTMLReactParser from 'html-react-parser';
+
 interface ArticleDivisionProps {
     image: string;
     leftText: string;
@@ -13,7 +15,7 @@ const ArticleDivision = ({ image, leftText, rightText }: ArticleDivisionProps) =
             }}
         >
             <svg
-                className="absolute bottom-0 hidden overflow-hidden lg:block lg:transform-[scale(2)] xl:transform-[scale(1.5)] 2xl:transform-[scale(1)]"
+                className="absolute bottom-0 hidden overflow-hidden lg:block lg:transform-[scale(2)] xl:transform-[scale(1.8)] 2xl:transform-[scale(1.5)]"
                 viewBox="0 0 1216 235"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -52,18 +54,18 @@ const ArticleDivision = ({ image, leftText, rightText }: ArticleDivisionProps) =
                 />
             </svg>
 
-            <div className="absolute bottom-0 hidden w-full grid-cols-2 place-content-center gap-20 px-20 lg:grid lg:h-74 2xl:h-62">
-                <p className="text-xl text-white xl:text-2xl">{leftText}</p>
-                <p className="text-xl text-white xl:text-2xl">{rightText}</p>
+            <div className="absolute bottom-0 hidden w-full grid-cols-2 place-content-center gap-20 px-20 lg:grid lg:h-74 xl:h-78 2xl:h-78">
+                <div className="text-xl text-white">{HTMLReactParser(leftText)}</div>
+                <div className="text-xl text-white">{HTMLReactParser(rightText)}</div>
             </div>
 
             <div className="flex snap-x snap-mandatory gap-10 overflow-scroll p-5 pt-42 lg:hidden">
-                <p className="min-w-full snap-center rounded-xl bg-gray-renovacom p-2 text-lg leading-6 text-white shadow backdrop-blur-xs">
-                    {leftText}
-                </p>
-                <p className="min-w-full snap-center rounded-xl bg-gray-renovacom p-2 text-lg leading-6 text-white shadow backdrop-blur-xs">
-                    {rightText}
-                </p>
+                <div className="min-w-full snap-center rounded-xl bg-gray-renovacom p-2 text-lg leading-6 text-white shadow backdrop-blur-xs">
+                    {HTMLReactParser(leftText)}
+                </div>
+                <div className="min-w-full snap-center rounded-xl bg-gray-renovacom p-2 text-lg leading-6 text-white shadow backdrop-blur-xs">
+                    {HTMLReactParser(rightText)}
+                </div>
             </div>
         </article>
     );
