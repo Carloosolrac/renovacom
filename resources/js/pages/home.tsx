@@ -178,17 +178,17 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 <CardStatisticsContainer className={getWidthClasses()}>
                     {[
                         {
-                            icon: '/assets/home/icons/statistic-light.png',
+                            icon: '/assets/icons/statistic-light.png',
                             title: '+70 MWP',
                             description: 'Capacidad inspeccionada por día en plantas solares.',
                         },
                         {
-                            icon: '/assets/home/icons/statistic-up.png',
+                            icon: '/assets/icons/statistic-up.png',
                             title: '48h',
                             description: 'Tiempo de entrega de reportes.',
                         },
                         {
-                            icon: '/assets/home/icons/statistic-time.png',
+                            icon: '/assets/icons/statistic-time.png',
                             title: '35 min',
                             description: 'Tiempo de inspección por aerogenerador.',
                         },

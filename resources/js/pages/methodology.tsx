@@ -1,5 +1,7 @@
 import ArticleDivision from '@/components/ui/article-division';
 import Banner from '@/components/ui/banner';
+import CardAccordeonDown from '@/components/ui/card-accordeon-down';
+import CardAccordeonDownContainer from '@/components/ui/card-accordeon-down-container';
 import PrimaryBlackLink from '@/components/ui/primary-black-link';
 import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
@@ -38,8 +40,96 @@ const Methodology = () => {
                 overlay={true}
             />
 
-            <section className={cn(getWidthClasses(), 'py-10')}>
+            <section className={cn(getWidthClasses(), 'space-y-5 py-10')}>
                 <Title>De la Captura a la Decisión: Nuestro Proceso de Ingeniería de Datos</Title>
+                <CardAccordeonDownContainer>
+                    <CardAccordeonDown
+                        image="/assets/captura-de-datos.png"
+                        icon="/assets/icons/drone.png"
+                        title="Adquisición de Datos"
+                        contentable={[
+                            {
+                                title: 'Planificación:',
+                                content:
+                                    'Definimos misiones de vuelo óptimas (altura, solapamiento, ruta entre otras), garantizando cobertura total y cumplimiento normativo.',
+                            },
+                            {
+                                title: 'Ejecución:',
+                                content:
+                                    'Vuelos autónomos repetibles, que capturan imágenes de ultra alta resolución (RGB) y/o termográficas con georreferenciación cm-level.',
+                            },
+                            {
+                                title: 'Ventaja Operativa:',
+                                content:
+                                    'Elimina riesgos de seguridad en campo, reduce el downtime del activo y asegura la consistencia de los datos entre campañas, permitiendo análisis comparativos precisos.',
+                            },
+                        ]}
+                    />
+                    <CardAccordeonDown
+                        image="/assets/analisis-con-ia.png"
+                        icon="/assets/icons/ai.png"
+                        title="Análisis Estructurado con IA"
+                        contentable={[
+                            {
+                                title: 'Procesamiento:',
+                                content:
+                                    'Empleamos pipelines de IA entrenados con miles de imágenes etiquetadas de fallas en palas, torres y módulos fotovoltaicos.',
+                            },
+                            {
+                                title: 'Detección y Clasificación:',
+                                content:
+                                    'Los algoritmos identifican anomalías (grietas, erosión, hotspots, soiling, etc) y las clasifican automáticamente por tipo y nivel de severidad.',
+                            },
+                            {
+                                title: 'Salida Estructurada:',
+                                content: 'Generamos una base de datos geoespacial de hallazgos, lista para la siguiente capa de validación.',
+                            },
+                        ]}
+                    />
+                    <CardAccordeonDown
+                        image="/assets/validacion-tecnica.png"
+                        icon="/assets/icons/eye.png"
+                        title="Validación de Ingeniería"
+                        contentable={[
+                            {
+                                title: 'Auditoría de Hallazgos:',
+                                content: 'Nuestros ingenieros especialistas revisan y validan los hallazgos de la IA.',
+                            },
+                            {
+                                title: 'Cierre del Ciclo:',
+                                content:
+                                    'Retroalimentación (feedback loop) que entrena continuamente a nuestros modelos, mejorando su precisión con cada inspección.',
+                            },
+                            {
+                                title: 'Sello de Confiabilidad:',
+                                content:
+                                    'Es la garantía de que cada recomendación está respaldada por tecnología de punta y criterio profesional experto.',
+                            },
+                        ]}
+                    />
+                    <CardAccordeonDown
+                        image="/assets/resultados-accionables.png"
+                        icon="/assets/icons/dashboard.png"
+                        title="Entrega de Resultados Accionables"
+                        contentable={[
+                            {
+                                title: 'Reportes Ejecutivos:',
+                                content:
+                                    'Documentos con resumen ejecutivo, hallazgos prioritarios, análisis de tendencias y recomendaciones claras de mantenimiento.',
+                            },
+                            {
+                                title: 'Dashboard Interactivo:',
+                                content:
+                                    'Acceso web a una plataforma donde visualizar todos los hallazgos en el contexto del activo, filtrar por severidad y exportar datos.',
+                            },
+                            {
+                                title: 'Integración:',
+                                content:
+                                    'Entregamos los datos estructurados (CSV, JSON) y reportes en formatos compatibles para su integración en sistemas CMMS (como SAP, IBM Maximo), GIS o plataformas de BI.',
+                            },
+                        ]}
+                    />
+                </CardAccordeonDownContainer>
             </section>
 
             <section className={cn(getWidthClasses(), 'space-y-5 py-10')}>
