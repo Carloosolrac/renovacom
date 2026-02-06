@@ -1,5 +1,9 @@
 import ArticlesSelector from '@/components/ui/articles-selector';
 import Banner from '@/components/ui/banner';
+import CardSlide from '@/components/ui/card-slide';
+import CardSlideContainer from '@/components/ui/card-slide-container';
+import Paragraph from '@/components/ui/paragraph';
+import SecondaryLink from '@/components/ui/secondary-link';
 import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
@@ -78,7 +82,52 @@ const Service = () => {
                     ]}
                 />
             </section>
-            <section className={cn(getWidthClasses(), 'space-y-14')}></section>
+
+            <section className={cn(getWidthClasses(), 'space-y-14')}>
+                <Title>Servicios complementarios</Title>
+                <CardSlideContainer>
+                    {[
+                        {
+                            title: 'Monitoreo y control de construcción (EPC)',
+                            description:
+                                'Detectamos fallas a nivel de celda mediante termografía y combinamos medición de suciedad en un solo vuelo para estimar pérdidas y optimizar mantenimiento.',
+                            image: '/assets/services/monitoreo-y-control.png',
+                        },
+                        {
+                            title: 'DIGITALIZACIÓN DE ACTIVOS Y GEMELOS VIRTUALES',
+                            description:
+                                'Detectamos fallas a nivel de celda mediante termografía y combinamos medición de suciedad en un solo vuelo para estimar pérdidas y optimizar mantenimiento.',
+                            image: '/assets/services/digitalizacion-de-activos.png',
+                        },
+                        {
+                            title: 'CONSULTORÍA E INGENIERÍA A MEDIDA',
+                            description:
+                                'Detectamos fallas a nivel de celda mediante termografía y combinamos medición de suciedad en un solo vuelo para estimar pérdidas y optimizar mantenimiento.',
+                            image: '/assets/services/consultoria-e-ingenieria.png',
+                        },
+                    ].map((item, index) => (
+                        <CardSlide
+                            hasWhiteTitle={true}
+                            key={index}
+                            {...item}
+                        />
+                    ))}
+                </CardSlideContainer>
+            </section>
+
+            <section className={cn(getWidthClasses(), 'space-y-5')}>
+                <Paragraph className="text-center">¿Listo para tomar decisiones basadas en datos en información confiable?</Paragraph>
+                <Title className="text-center">De la Captura de Datos a la Decisión Estratégica</Title>
+                <Paragraph className="text-center">
+                    En Renovacom entregamos la capa de inteligencia que su operación necesita para ser más predictiva y eficiente
+                </Paragraph>
+                <SecondaryLink
+                    className="mx-auto"
+                    href="#contacto"
+                >
+                    Hablemos de tu proyecto
+                </SecondaryLink>
+            </section>
         </>
     );
 };
