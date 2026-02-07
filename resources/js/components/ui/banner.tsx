@@ -18,7 +18,7 @@ const Banner = ({ pretitle, title, buttonText, buttonLink, characteristics, over
     return (
         <section
             className={cn(
-                'relative mx-auto flex h-lvh min-h-96 items-center justify-center bg-cover bg-center bg-no-repeat pt-42 lg:pt-20 xl:min-h-200 xl:bg-size-[130%] 2xl:bg-size-[150%]',
+                'relative mx-auto flex min-h-96 items-center justify-center bg-cover bg-center bg-no-repeat pt-32 pb-10 md:h-lvh lg:pt-20 xl:min-h-200 xl:bg-size-[130%] 2xl:bg-size-[150%]',
             )}
             style={{
                 backgroundImage: `url(${backgroundImage})`,
