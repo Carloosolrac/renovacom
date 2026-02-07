@@ -3,6 +3,8 @@ import Banner from '@/components/ui/banner';
 import CardSlide from '@/components/ui/card-slide';
 import CardSlideContainer from '@/components/ui/card-slide-container';
 import Paragraph from '@/components/ui/paragraph';
+import PrimaryBlackLink from '@/components/ui/primary-black-link';
+import PrimaryWhiteLink from '@/components/ui/primary-white-link';
 import SecondaryLink from '@/components/ui/secondary-link';
 import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
@@ -83,6 +85,62 @@ const Service = () => {
                 />
             </section>
 
+            <section className="w-full bg-black-renovacom py-20">
+                <div className={cn(getWidthClasses(), 'space-y-12')}>
+                    <h3 className="font-space-grotesk text-4xl font-medium text-white uppercase">Beneficios clave</h3>
+
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                        {/* Beneficio 1 */}
+                        <div className="flex gap-6">
+                            <img
+                                src="/assets/icons/shield.png"
+                                className="size-14"
+                                alt=""
+                            />
+                            <Paragraph className="text-white">Elimina riesgos de seguridad asociados a trabajos en altura.</Paragraph>
+                        </div>
+
+                        {/* Beneficio 2 */}
+                        <div className="flex gap-6">
+                            <img
+                                src="/assets/icons/target.png"
+                                className="size-14"
+                                alt=""
+                            />
+                            <Paragraph className="text-white">Anticipa fallas costosas con la detección temprana de defectos progresivos.</Paragraph>
+                        </div>
+
+                        {/* Beneficio 3 */}
+                        <div className="flex gap-6">
+                            <img
+                                src="/assets/icons/round-about.png"
+                                className="size-14"
+                                alt=""
+                            />
+                            <Paragraph className="text-white">
+                                Extiende la vida útil del activo con un programa basado en su condición real.
+                            </Paragraph>
+                        </div>
+
+                        {/* Beneficio 4 */}
+                        <div className="flex gap-6">
+                            <img
+                                src="/assets/icons/graph.png"
+                                className="size-14"
+                                alt=""
+                            />
+
+                            <Paragraph className="text-white">Optimiza el OPEX, interviniendo solo donde y cuando es necesario.</Paragraph>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-end">
+                        <PrimaryBlackLink>Hablemos de tu proyecto</PrimaryBlackLink>
+                    </div>
+                </div>
+            </section>
+
+            {/* Servicios principales */}
             <section className={cn(getWidthClasses(), 'space-y-14')}>
                 <Title>Servicios complementarios</Title>
                 <CardSlideContainer>
@@ -115,6 +173,7 @@ const Service = () => {
                 </CardSlideContainer>
             </section>
 
+            {/* Servicios complementarios */}
             <section className={cn(getWidthClasses(), 'space-y-5')}>
                 <Paragraph className="text-center">¿Listo para tomar decisiones basadas en datos en información confiable?</Paragraph>
                 <Title className="text-center">De la Captura de Datos a la Decisión Estratégica</Title>
