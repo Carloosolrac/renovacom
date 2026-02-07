@@ -1,8 +1,8 @@
+import HTMLReactParser from 'html-react-parser/lib/index';
 import { cn } from '@/lib/utils';
 import { getWidthClasses } from '@/utils/utils';
 import { StarIcon } from '../icons/icons';
 import PrimaryLink from './primary-link';
-import HTMLReactParser from 'html-react-parser/lib/index';
 
 interface BannerProps {
     pretitle?: string;
@@ -18,7 +18,7 @@ const Banner = ({ pretitle, title, buttonText, buttonLink, characteristics, over
     return (
         <section
             className={cn(
-                'relative mx-auto flex h-lvh min-h-96 items-center justify-center bg-cover bg-center bg-no-repeat pt-20 xl:min-h-200 xl:bg-size-[130%] 2xl:bg-size-[150%]',
+                'relative mx-auto flex h-lvh min-h-96 items-center justify-center bg-cover bg-center bg-no-repeat pt-42 lg:pt-20 xl:min-h-200 xl:bg-size-[130%] 2xl:bg-size-[150%]',
             )}
             style={{
                 backgroundImage: `url(${backgroundImage})`,
@@ -30,11 +30,9 @@ const Banner = ({ pretitle, title, buttonText, buttonLink, characteristics, over
 
             {/* Content */}
             <div className={cn(getWidthClasses(), 'z-10 flex flex-col items-start gap-10 md:gap-20 xl:gap-8')}>
-                {pretitle && <p className="max-w-xl font-space-grotesk text-2xl font-medium text-white">{pretitle}</p>}
+                {pretitle && <p className="max-w-xl font-space-grotesk text-xl font-medium text-white lg:text-2xl">{pretitle}</p>}
 
-                <div
-                    className="font-space-grotesk text-5xl leading-12 font-medium tracking-wide text-white uppercase md:text-6xl md:leading-15 lg:max-w-2/3 xl:leading-20"
-                >
+                <div className="font-space-grotesk text-5xl leading-12 font-medium tracking-wide text-white uppercase md:text-6xl md:leading-15 lg:max-w-2/3 xl:leading-20">
                     {HTMLReactParser(title)}
                 </div>
 
