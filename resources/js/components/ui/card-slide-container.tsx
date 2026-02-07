@@ -5,10 +5,13 @@ import type { CardSlideProps } from './card-slide';
 const CardSlideContainer = (props: DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => {
     const { className, ...rest } = props;
 
+    const computedDisplayClasses =
+        Children.count(props.children) <= 3 ? 'flex-col flex items-stretch lg:flex-row' : 'flex-col flex items-stretch lg:grid lg:grid-cols-3';
+
     return (
         <div
             role="list"
-            className={cn('flex flex-col items-stretch gap-8 lg:flex-row', className)}
+            className={cn('gap-4 2xl:gap-8', className, computedDisplayClasses)}
             {...rest}
         >
             {Children.map(props.children, (child) =>
