@@ -20,11 +20,11 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
             case 2:
                 return {
                     title: 'text-5xl',
-                    description: 'text-lg! leading-7!',
+                    description: 'text-lg! leading-6! lg:leading-7!',
                     parentContanier: 'top-1/2',
-                    containerCard: 'h-1/2 gap-4 p-4',
+                    containerCard: 'h-1/2 gap-4 p-2',
                     card: 'h-full ',
-                    translateCard: 'group-hover:-translate-y-[113%] -translate-y-[113%] lg:translate-y-0',
+                    translateCard: 'group-hover:-translate-y-[106%] -translate-y-[106%] lg:translate-y-0',
                 };
             case 3: {
                 return {
