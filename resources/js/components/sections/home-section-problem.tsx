@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 const HomeSectionProblem = () => {
@@ -11,6 +11,19 @@ const HomeSectionProblem = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
 
     const [animationState, setAnimationState] = useState<'idle' | 'in' | 'out'>('idle');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!sectionRef.current) return;
+            const { top } = sectionRef.current.getBoundingClientRect();
+            if (top <= 0 && animationState === 'idle') {
+                setAnimationState('in');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [animationState]);
 
     const handleSectionClick = () => {
         if (animationState === 'in') {
@@ -33,7 +46,7 @@ const HomeSectionProblem = () => {
             ref={sectionRef}
             onClick={handleSectionClick}
             className={cn(
-                'relative mx-auto flex h-[85lvh] max-h-250 min-h-175 cursor-pointer flex-col items-center justify-center gap-6 overflow-hidden bg-cover bg-center',
+                'relative mx-auto flex h-130 cursor-pointer flex-col items-center justify-center gap-4 overflow-hidden bg-cover bg-center lg:h-[85lvh] lg:max-h-230 lg:gap-6 xl:max-h-250 xl:min-h-175',
             )}
             style={{
                 backgroundImage: `url(${'/assets/home/background-section-problem.png'})`,
@@ -44,11 +57,14 @@ const HomeSectionProblem = () => {
                     ref={(el) => {
                         if (el) cardsLeftRef.current[0] = el;
                     }}
-                    className={cn('h-[75lvh] max-h-210 min-h-150 min-w-275 rounded-renovacom-xl bg-gray-renovacom', getAnimationClass('card-left'))}
+                    className={cn(
+                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
+                        getAnimationClass('card-left'),
+                    )}
                 ></div>
 
-                <div className="h-[75lvh] max-h-210 min-h-150 min-w-275 rounded-renovacom-xl bg-gray-renovacom"></div>
-                <div className="h-[75lvh] max-h-210 min-h-150 min-w-275 rounded-renovacom-xl bg-gray-renovacom"></div>
+                <div className="h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275"></div>
+                <div className="h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275"></div>
             </div>
 
             <div className="flex items-center gap-6">
@@ -56,19 +72,25 @@ const HomeSectionProblem = () => {
                     ref={(el) => {
                         if (el) cardsLeftRef.current[1] = el;
                     }}
-                    className={cn('h-[75lvh] max-h-210 min-h-150 min-w-275 rounded-renovacom-xl bg-gray-renovacom', getAnimationClass('card-left'))}
+                    className={cn(
+                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
+                        getAnimationClass('card-left'),
+                    )}
                 ></div>
 
                 {/* MIDDLE INITIAL */}
                 <div
                     ref={cardCenterRef}
                     className={cn(
-                        'flex h-[75lvh] max-h-210 min-h-150 max-w-275 min-w-275 items-center justify-center rounded-renovacom-xl bg-gray-renovacom px-5 uppercase',
+                        'flex h-95 w-95 items-center justify-center rounded-renovacom-xl bg-gray-renovacom px-5 uppercase lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:max-w-275 lg:min-w-275',
                         getAnimationClass('card-center'),
                     )}
                 >
                     <h3
-                        className={cn('text-center font-space-grotesk text-7xl leading-24 font-semibold text-white!', getAnimationClass('text-card'))}
+                        className={cn(
+                            'text-center font-space-grotesk text-4xl leading-12 font-semibold text-white! lg:text-7xl lg:leading-24',
+                            getAnimationClass('text-card'),
+                        )}
                     >
                         Automatizamos la captura y análisis de datos, <span className="text-green-renovacom">para optimizar la Operación.</span>
                     </h3>
@@ -76,7 +98,10 @@ const HomeSectionProblem = () => {
 
                 <div
                     ref={cardRightRef}
-                    className={cn('h-[75lvh] max-h-210 min-h-150 min-w-275 rounded-renovacom-xl bg-gray-renovacom', getAnimationClass('card-right'))}
+                    className={cn(
+                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
+                        getAnimationClass('card-right'),
+                    )}
                 ></div>
             </div>
 
@@ -85,23 +110,29 @@ const HomeSectionProblem = () => {
                     ref={(el) => {
                         if (el) cardsLeftRef.current[2] = el;
                     }}
-                    className={cn('h-[75lvh] max-h-210 min-h-150 min-w-275 rounded-renovacom-xl bg-gray-renovacom', getAnimationClass('card-left'))}
+                    className={cn(
+                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
+                        getAnimationClass('card-left'),
+                    )}
                 ></div>
 
                 <div
                     ref={cardBottomRef}
-                    className={cn('h-[75lvh] max-h-210 min-h-150 min-w-275 rounded-renovacom-xl bg-gray-renovacom', getAnimationClass('card-bottom'))}
+                    className={cn(
+                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
+                        getAnimationClass('card-bottom'),
+                    )}
                 ></div>
 
                 {/* LEFT TO TOP */}
                 <div
                     ref={cardBottomToTopRef}
                     className={cn(
-                        'flex h-[75lvh] max-h-210 min-h-150 min-w-275 items-center justify-center rounded-renovacom-xl bg-gray-renovacom',
+                        'flex h-95 w-95 -translate-x-[5.5%] items-center justify-center rounded-renovacom-xl bg-gray-renovacom p-10 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275 lg:translate-x-0 lg:p-0',
                         getAnimationClass('card-bottom-to-top'),
                     )}
                 >
-                    <h3 className="max-w-3xl text-justify font-space-grotesk text-5xl leading-16 text-white">
+                    <h3 className="max-w-3xl font-space-grotesk text-2xl text-white lg:text-justify lg:text-5xl lg:leading-16">
                         Renovacom implementa un{' '}
                         <span className="text-green-renovacom">sistema de adquisición de datos autónoma y análisis con IA</span> que permite detectar
                         y clasificar daños en 48 horas.
@@ -112,7 +143,7 @@ const HomeSectionProblem = () => {
             <div
                 ref={cardBottomBottomRef}
                 className={cn(
-                    'absolute left-1/2 h-[75lvh] max-h-210 min-h-150 min-w-275 -translate-x-1/2 translate-y-[103%] rounded-renovacom-xl bg-gray-renovacom',
+                    'absolute left-1/2 h-95 w-95 -translate-x-1/2 translate-y-[105.5%] rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275 lg:translate-y-[103%]',
                     getAnimationClass('card-bottom-bottom'),
                 )}
             ></div>
