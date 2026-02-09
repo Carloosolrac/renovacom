@@ -36,7 +36,14 @@ const Banner = ({ pretitle, title, buttonText, buttonLink, characteristics, over
                     {HTMLReactParser(title)}
                 </div>
 
-                {buttonLink && buttonText && <PrimaryLink href={buttonLink}>{buttonText}</PrimaryLink>}
+                {buttonLink && buttonText && (
+                    <PrimaryLink
+                        href={buttonLink}
+                        aria-label={buttonText}
+                    >
+                        {buttonText}
+                    </PrimaryLink>
+                )}
 
                 {characteristics && (
                     <ul className="space-y-4 text-white">

@@ -74,7 +74,12 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <PrimaryLink href="#contacto">Agendar una reunión</PrimaryLink>
+                            <PrimaryLink
+                                href="#contacto"
+                                aria-label="Agendar una reunión"
+                            >
+                                Agendar una reunión
+                            </PrimaryLink>
                         </li>
                     </ul>
                 </nav>
@@ -128,6 +133,7 @@ const Header = () => {
                         <PrimaryLink
                             href="#contacto"
                             className="block text-center"
+                            aria-label="Agendar una reunión"
                         >
                             Agendar una reunión
                         </PrimaryLink>

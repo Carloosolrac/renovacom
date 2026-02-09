@@ -144,7 +144,12 @@ El resultado final es una operación que pasa de ser reactiva a ser  <strong>pre
                     rightText={articleRight}
                 />
                 <div className="flex items-center justify-end">
-                    <PrimaryBlackLink href={'#contacto'}>Habla con un especialista</PrimaryBlackLink>
+                    <PrimaryBlackLink
+                        href={'#contacto'}
+                        aria-label="Hablar con un especialista"
+                    >
+                        Habla con un especialista
+                    </PrimaryBlackLink>
                 </div>
             </section>
         </>

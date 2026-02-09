@@ -135,7 +135,7 @@ const Service = () => {
                     </div>
 
                     <div className="flex justify-end">
-                        <PrimaryBlackLink>Hablemos de tu proyecto</PrimaryBlackLink>
+                        <PrimaryBlackLink aria-label="Hablar sobre tu proyecto">Hablemos de tu proyecto</PrimaryBlackLink>
                     </div>
                 </div>
             </section>
@@ -183,6 +183,7 @@ const Service = () => {
                 <SecondaryLink
                     className="mx-auto"
                     href="#contacto"
+                    aria-label="Hablar sobre tu proyecto"
                 >
                     Hablemos de tu proyecto
                 </SecondaryLink>

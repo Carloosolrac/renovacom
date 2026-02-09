@@ -51,10 +51,16 @@ const LayoutForm = () => {
                                 />
                             </div>
                             <div className="flex flex-col gap-2">
-                                <label className="font-semibold text-white">Servicio *</label>
+                                <label
+                                    className="font-semibold text-white"
+                                    id="service"
+                                >
+                                    Servicio *
+                                </label>
                                 <select
                                     className="cursor-pointer appearance-none rounded-full border-2 border-white bg-transparent px-5 py-4 text-white transition-colors focus:border-green-renovacom focus:outline-none"
                                     defaultValue="solar"
+                                    id="service"
                                 >
                                     <option
                                         value=""
@@ -82,7 +88,12 @@ const LayoutForm = () => {
 
                         {/* Botón */}
                         <div className="flex justify-start pt-4">
-                            <PrimaryBlackLink href="#contacto">Hablemos</PrimaryBlackLink>
+                            <PrimaryBlackLink
+                                href="#contacto"
+                                aria-label="Contactar para hablar sobre tu consulta"
+                            >
+                                Hablemos
+                            </PrimaryBlackLink>
                         </div>
                     </form>
                 </div>

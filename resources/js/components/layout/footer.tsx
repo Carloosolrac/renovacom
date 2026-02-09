@@ -101,7 +101,7 @@ const Footer = () => {
                     <ul role="list">
                         {['info@renovacom.cl', '+569 1234 5678', 'LinkedIn'].map((item) => (
                             <li
-                                role="item"
+                                role="listitem"
                                 key={item}
                                 className="mb-4 text-lg text-white"
                             >

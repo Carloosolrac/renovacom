@@ -11,7 +11,7 @@ export interface CardStatisticsProps {
 const CardStatistics = ({ title, description, icon, className, delay }: CardStatisticsProps) => {
     return (
         <div
-            role="item"
+            role="listitem"
             data-aos="fade-up"
             data-aos-delay={delay}
             className={cn('flex h-75 w-full flex-col justify-around rounded-renovacom border border-white bg-black-renovacom p-8', className)}

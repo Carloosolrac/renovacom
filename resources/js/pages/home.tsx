@@ -88,8 +88,8 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </CardAccordeonContainer>
 
                 <div className="flex flex-col items-center justify-end gap-5 py-10 md:flex-row">
-                    <SecondaryLink>Conoce nuestra metodología</SecondaryLink>
-                    <PrimaryBlackLink>Hablemos</PrimaryBlackLink>
+                    <SecondaryLink aria-label="Conocer nuestra metodología">Conoce nuestra metodología</SecondaryLink>
+                    <PrimaryBlackLink aria-label="Contactar para hablar sobre nuestros servicios">Hablemos</PrimaryBlackLink>
                 </div>
             </section>
 
@@ -127,7 +127,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                         'SERVICIOS DE INGENIERÍA Y CONSULTORÍA A MEDIDA',
                     ].map((item, index) => (
                         <div
-                            role="item"
+                            role="listitem"
                             key={index}
                             className="group hover:bg-black-renovacom"
                         >
@@ -142,6 +142,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                                 <PrimaryWhiteLink
                                     role="button"
                                     className="hidden group-hover:flex"
+                                    aria-label={`Conocer más sobre ${item}`}
                                 >
                                     Conoce más
                                 </PrimaryWhiteLink>
@@ -149,6 +150,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                                 <SecondaryLink
                                     role="button"
                                     className="group-hover:hidden lg:hidden"
+                                    aria-label={`Conocer más sobre ${item}`}
                                 >
                                     Conoce más
                                 </SecondaryLink>
@@ -158,8 +160,8 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </div>
 
                 <div className={cn(getWidthClasses(), 'flex flex-col items-center justify-end gap-4 lg:flex-row')}>
-                    <SecondaryLink>Cononce nuestros servicios</SecondaryLink>
-                    <PrimaryBlackLink>Hablemos</PrimaryBlackLink>
+                    <SecondaryLink aria-label="Conocer nuestros servicios">Cononce nuestros servicios</SecondaryLink>
+                    <PrimaryBlackLink aria-label="Contactar para hablar">Hablemos</PrimaryBlackLink>
                 </div>
             </section>
 

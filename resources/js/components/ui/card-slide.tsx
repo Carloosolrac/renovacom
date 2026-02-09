@@ -60,7 +60,7 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
 
     return (
         <div
-            role="item"
+            role="listitem"
             className="group relative max-h-200 w-full max-w-150 overflow-hidden rounded-renovacom bg-cover bg-center"
             style={{
                 backgroundImage: `url(${image})`,
@@ -96,7 +96,12 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
                         )}
                     >
                         <Paragraph className={`font-sans text-white ${computedSize.description}`}>{description}</Paragraph>
-                        <PrimaryWhiteLink buttonSize={computedButtonSize}>Conoce más</PrimaryWhiteLink>
+                        <PrimaryWhiteLink
+                            buttonSize={computedButtonSize}
+                            aria-label={`Conocer más sobre ${title}`}
+                        >
+                            Conoce más
+                        </PrimaryWhiteLink>
                     </div>
                     <div className={cn('max-w-5/6 min-w-5/6 rounded-3xl bg-gray-renovacom', computedSize.card)}></div>
                 </div>
