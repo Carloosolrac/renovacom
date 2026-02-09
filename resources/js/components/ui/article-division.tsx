@@ -25,8 +25,8 @@ const ArticleDivision = ({ image, leftText, rightText }: ArticleDivisionProps) =
                     y1="1.27637"
                     y2="1.27637"
                     stroke="white"
-                    stroke-opacity="0.5"
-                    stroke-width="2"
+                    strokeOpacity="0.5"
+                    strokeWidth="2"
                 />
                 <line
                     x1="606.995"
@@ -34,8 +34,8 @@ const ArticleDivision = ({ image, leftText, rightText }: ArticleDivisionProps) =
                     x2="607.005"
                     y2="0.276326"
                     stroke="white"
-                    stroke-opacity="0.5"
-                    stroke-width="2"
+                    strokeOpacity="0.5"
+                    strokeWidth="2"
                 />
                 <line
                     x1="600"
@@ -43,14 +43,14 @@ const ArticleDivision = ({ image, leftText, rightText }: ArticleDivisionProps) =
                     x2="614"
                     y2="1"
                     stroke="#F8FEFF"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
                 <line
                     x1="607"
                     y1="8"
                     x2="607"
                     stroke="#F8FEFF"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
             </svg>
 

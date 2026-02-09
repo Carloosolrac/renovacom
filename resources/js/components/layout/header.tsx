@@ -29,11 +29,18 @@ const Header = () => {
                     'absolute right-1/2 z-50 my-5 flex translate-x-1/2 items-center justify-between rounded-4xl p-3 backdrop-blur-lg lg:rounded-renovacom lg:p-5 lg:py-6',
                 )}
             >
-                <img
-                    src="/assets/logo.png"
-                    alt="Renovacom Logo"
-                    className="w-64"
-                />
+                <Link
+                    href={home.get().url}
+                    prefetch={true}
+                    cacheFor={'10s'}
+                    viewTransition={true}
+                >
+                    <img
+                        src="/assets/logo.png"
+                        alt="Renovacom Logo"
+                        className="w-64"
+                    />
+                </Link>
 
                 {/* Header on large screens */}
                 <nav className="hidden lg:block">

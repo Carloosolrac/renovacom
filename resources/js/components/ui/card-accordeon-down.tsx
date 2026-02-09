@@ -63,7 +63,7 @@ const CardAccordeonDown = ({ image, icon, title, contentable, cardNumber }: Card
                             <path
                                 d="M36.2886 0V36.2886M36.2886 36.2886H0M36.2886 36.2886V72.5772M36.2886 36.2886H72.5772"
                                 stroke="white"
-                                stroke-width="5"
+                                strokeWidth="5"
                             />
                         </svg>
                     </button>

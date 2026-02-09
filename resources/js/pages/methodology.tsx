@@ -24,6 +24,10 @@ const Methodology = () => {
         <strong>Maximiza la vida útil</strong> → programa de mantenimiento basado en su condición real.
     </li>
 </ul>`;
+    const articleLeft = `Nuestra metodología cierra la brecha entre la recolección de datos y la toma de decisiones. Entregamos un diagnóstico técnico ponderado y una hoja de ruta para la acción.
+    <br/>
+    <br/>
+El resultado final es una operación que pasa de ser reactiva a ser  <strong>predictiva y optimizada.</strong>`;
 
     return (
         <>
@@ -136,9 +140,7 @@ const Methodology = () => {
                 <Title>Transformamos datos precisos en decisiones estratégicas</Title>
                 <ArticleDivision
                     image="/assets/methodology/background-article-division.png"
-                    leftText="Nuestra metodología cierra la brecha entre la recolección de datos y la toma de decisiones. Entregamos un diagnóstico técnico ponderado y una hoja de ruta para la acción.
-
-El resultado final es una operación que pasa de ser reactiva a ser predictiva y optimizada."
+                    leftText={articleLeft}
                     rightText={articleRight}
                 />
                 <div className="flex items-center justify-end">

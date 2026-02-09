@@ -41,8 +41,8 @@ const CardAccordeon = ({ background, number, icon, title, description, isFirst }
                     x2="712"
                     y2="110"
                     stroke="white"
-                    stroke-opacity="0.5"
-                    stroke-width="2"
+                    strokeOpacity="0.5"
+                    strokeWidth="2"
                 />
                 <line
                     x1="169"
@@ -50,8 +50,8 @@ const CardAccordeon = ({ background, number, icon, title, description, isFirst }
                     x2="169"
                     y2="-4.37113e-08"
                     stroke="white"
-                    stroke-opacity="0.5"
-                    stroke-width="2"
+                    strokeOpacity="0.5"
+                    strokeWidth="2"
                 />
                 <line
                     x1="176"
@@ -59,7 +59,7 @@ const CardAccordeon = ({ background, number, icon, title, description, isFirst }
                     x2="162"
                     y2="110"
                     stroke="#F8FEFF"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
                 <line
                     x1="169"
@@ -67,7 +67,7 @@ const CardAccordeon = ({ background, number, icon, title, description, isFirst }
                     x2="169"
                     y2="117"
                     stroke="#F8FEFF"
-                    stroke-width="2"
+                    strokeWidth="2"
                 />
             </svg>
 

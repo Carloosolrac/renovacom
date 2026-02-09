@@ -24,12 +24,12 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
                     parentContanier: 'top-1/2',
                     containerCard: 'h-1/2 gap-4 p-4',
                     card: 'h-full ',
-                    translateCard: 'group-hover:-translate-y-[113%] -translate-y-[119%] lg:translate-y-0',
+                    translateCard: 'group-hover:-translate-y-[113%] -translate-y-[113%] lg:translate-y-0',
                 };
             case 3: {
                 return {
                     title: 'text-3xl',
-                    description: 'text-sm! leading-4!',
+                    description: 'text-base! leading-4.5! ',
                     parentContanier: 'top-1/2 lg:top-[40%]',
                     containerCard: 'h-5/6 gap-2 p-1 lg:gap-4 lg:p-2',
                     card: 'h-50',

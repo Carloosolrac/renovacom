@@ -1,3 +1,4 @@
+import { Fragment } from 'react/jsx-runtime';
 import { StarIcon } from '@/components/icons/icons';
 import HomeSectionProblem from '@/components/sections/home-section-problem';
 import ArticleDivision from '@/components/ui/article-division';
@@ -36,19 +37,14 @@ const Home = () => {
                     className="flex flex-col flex-wrap items-center justify-around gap-8 text-3xl text-black-renovacom md:flex-row"
                 >
                     {['Agilidad', 'Precisión', 'Seguridad', 'Autonomía'].map((item, index) => (
-                        <>
-                            <li
-                                key={index}
-                                className="flex items-center gap-4"
-                            >
-                                {item}
-                            </li>
+                        <Fragment key={index}>
+                            <li className="flex items-center gap-4">{item}</li>
                             {index < 3 && (
                                 <li>
                                     <StarIcon className="size-6 fill-black-renovacom" />
                                 </li>
                             )}
-                        </>
+                        </Fragment>
                     ))}
                 </ul>
             </section>
