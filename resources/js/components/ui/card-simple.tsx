@@ -8,7 +8,7 @@ const CardSimple = ({ icon, title, description }: CardSimpleProps) => {
     return (
         <div
             role="listitem"
-            className="border-blue-renovacom space-y-8 rounded-renovacom border-2 bg-white p-10"
+            className="border-blue-renovacom space-y-8 rounded-3xl border-2 bg-white p-10"
         >
             <img
                 className="max-w-14"

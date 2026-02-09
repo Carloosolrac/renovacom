@@ -61,7 +61,7 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
     return (
         <div
             role="listitem"
-            className="group relative max-h-200 w-full max-w-150 overflow-hidden rounded-renovacom bg-cover bg-center"
+            className="group relative max-h-200 w-full max-w-150 overflow-hidden rounded-3xl bg-cover bg-center"
             style={{
                 backgroundImage: `url(${image})`,
                 height: HEIGHT_PER_ITEM,

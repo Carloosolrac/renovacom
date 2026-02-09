@@ -14,7 +14,7 @@ const CardStatistics = ({ title, description, icon, className, delay }: CardStat
             role="listitem"
             data-aos="fade-up"
             data-aos-delay={delay}
-            className={cn('flex h-75 w-full flex-col justify-around rounded-renovacom border border-white bg-black-renovacom p-8', className)}
+            className={cn('flex h-75 w-full flex-col justify-around rounded-3xl border border-white bg-black-renovacom p-8', className)}
         >
             <img
                 src={icon}

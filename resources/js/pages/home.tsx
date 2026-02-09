@@ -103,9 +103,9 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
 
                 <CardSlideContainer>
                     <CardSlide
-                        title="INSPECCIÓN SOLAR"
-                        description="Detectamos fallas a nivel de celda mediante termografía y combinamos medición de suciedad en un solo vuelo para estimar pérdidas y optimizar mantenimiento."
-                        image="/assets/home/background-card-slider-1.png"
+                        title="INSPECCIÓN EÓLICa"
+                        description="Identificamos el estado físico de las aspas y la torre del aerogenerador de manera rápida, segura y confiable para la programación eficiente de las tareas de mantenimiento."
+                        image="/assets/home/background-inspeccion-eolica.png"
                     />
                     <CardSlide
                         title="INSPECCIÓN SOLAR"

@@ -64,12 +64,12 @@ const Header = () => {
                             </li>
                         ))}
                         <li>
-                            <Link>
+                            <Link aria-label="Enlace Instagram">
                                 <InstagramIcon className="size-5 fill-white transition-all hover:fill-green-renovacom" />
                             </Link>
                         </li>
                         <li>
-                            <Link>
+                            <Link aria-label="Enlace LinkedIn">
                                 <LinkedInIcon className="size-5 fill-white transition-all hover:fill-green-renovacom" />
                             </Link>
                         </li>
