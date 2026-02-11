@@ -29,6 +29,7 @@ const Home = () => {
                 backgroundImage="/assets/home/hero-home.gif"
                 buttonLink="#contacto"
                 buttonText="Hablemos"
+                innerAnimationText={true}
                 characteristics={['Inteligencia operativa para activos renovables', 'Sistema de adquisición de datos autónoma']}
             />
             <section className={cn(getWidthClasses(), 'bg-white')}>
@@ -94,7 +95,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
             </section>
 
             <section className={cn('space-y-14', getWidthClasses())}>
-                <Paragraph className="text-center font-bold">Inspecciones técnicas avanzadas</Paragraph>
+                <Paragraph className="text-center font-medium">Inspecciones técnicas avanzadas</Paragraph>
                 <Title className="text-center">Soluciones de inspección para reducir riesgos y aumentar rendimiento</Title>
                 <Paragraph className="mx-auto text-center lg:max-w-4/6">
                     Sistema integral de captura de datos en activos eólicos y fotovoltaicos, con procesamiento mediante IA que transforma información

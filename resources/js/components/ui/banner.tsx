@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import { getWidthClasses } from '@/utils/utils';
 import { StarIcon } from '../icons/icons';
 import PrimaryLink from './primary-link';
+import { useCallback } from 'react';
 
 interface BannerProps {
     pretitle?: string;
@@ -12,9 +13,27 @@ interface BannerProps {
     characteristics?: string[];
     overlay?: boolean;
     backgroundImage: string;
+    innerAnimationText?: boolean;
 }
 
-const Banner = ({ pretitle, title, buttonText, buttonLink, characteristics, overlay = false, backgroundImage }: BannerProps) => {
+const Banner = ({
+    pretitle,
+    title,
+    buttonText,
+    buttonLink,
+    characteristics,
+    overlay = false,
+    backgroundImage,
+    innerAnimationText = false,
+}: BannerProps) => {
+    const applyAnimatedClass = useCallback(
+        (animatedClass: string) => {
+            if (!innerAnimationText) return '';
+            return animatedClass;
+        },
+        [innerAnimationText],
+    );
+
     return (
         <section
             className={cn(
@@ -30,9 +49,29 @@ const Banner = ({ pretitle, title, buttonText, buttonLink, characteristics, over
 
             {/* Content */}
             <div className={cn(getWidthClasses(), 'z-10 flex flex-col items-start gap-10 md:gap-20 xl:gap-8')}>
-                {pretitle && <p className="max-w-xl font-space-grotesk text-xl font-medium text-white lg:text-2xl">{pretitle}</p>}
+                {pretitle && (
+                    <p
+                        className={cn(
+                            'max-w-xl font-space-grotesk text-xl font-medium text-white delay-1000 lg:text-2xl',
+                            applyAnimatedClass('opacity-fade-in'),
+                            {
+                                'opacity-0': innerAnimationText,
+                            },
+                        )}
+                        style={{
+                            animationDelay: '2000ms',
+                        }}
+                    >
+                        {pretitle}
+                    </p>
+                )}
 
-                <div className="font-space-grotesk text-5xl leading-12 font-medium tracking-wide text-white uppercase md:text-6xl md:leading-15 lg:max-w-2/3 xl:leading-20">
+                <div
+                    className={cn(
+                        'font-space-grotesk text-5xl leading-12 font-medium tracking-wide text-white uppercase delay-500 md:text-6xl md:leading-15 lg:max-w-2/3 xl:leading-20',
+                        applyAnimatedClass('fade-in-left'),
+                    )}
+                >
                     {HTMLReactParser(title)}
                 </div>
 
@@ -40,13 +79,26 @@ const Banner = ({ pretitle, title, buttonText, buttonLink, characteristics, over
                     <PrimaryLink
                         href={buttonLink}
                         aria-label={buttonText}
+                        className={cn(applyAnimatedClass('opacity-fade-in'), {
+                            'opacity-0': innerAnimationText,
+                        })}
+                        style={{
+                            animationDelay: '1000ms',
+                        }}
                     >
                         {buttonText}
                     </PrimaryLink>
                 )}
 
                 {characteristics && (
-                    <ul className="space-y-4 text-white">
+                    <ul
+                        className={cn('space-y-4 text-white', applyAnimatedClass('opacity-fade-in'), {
+                            'opacity-0': innerAnimationText,
+                        })}
+                        style={{
+                            animationDelay: '2000ms',
+                        }}
+                    >
                         {characteristics.map((item) => (
                             <li
                                 key={item}

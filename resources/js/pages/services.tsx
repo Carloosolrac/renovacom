@@ -19,10 +19,10 @@ const Service = () => {
                 pretitle="Servicios de inspección y consultoría para la gestión de activos renovables."
                 title="Inspecciones inteligentes para una <span className='text-green-renovacom'> operación optimizada</span>"
                 characteristics={[
-                    'Inspecciones 100% automatizadas',
-                    'Análisis de datos empleando IA',
-                    'Entreega en 48 horas',
-                    'Datos listos para tu gestión de activos',
+                    'Inspecciones 100% automatizadas.',
+                    'Análisis de datos empleando IA.',
+                    'Entrega en 48 horas.',
+                    'Datos listos para tu gestión de activos.',
                 ]}
                 overlay={true}
             />
