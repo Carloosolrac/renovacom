@@ -11,7 +11,7 @@ const PrimaryWhiteLink = ({ buttonSize = 'lg', ...props }: InertiaLinkProps & { 
         <Link
             {...rest}
             className={cn(
-                'flex w-fit items-center rounded-full border-2 border-white bg-transparent font-medium tracking-wide text-white transition-all xl:text-xl',
+                'font-regular flex w-fit items-center rounded-full border-2 border-white bg-transparent tracking-wide text-white transition-all xl:text-xl',
                 className,
                 getButtonSize(buttonSize),
             )}

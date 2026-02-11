@@ -9,7 +9,7 @@ const SecondaryLink = (props: InertiaLinkProps) => {
         <Link
             {...rest}
             className={cn(
-                'flex w-fit items-center rounded-full border-2 border-black-renovacom bg-transparent px-5 py-3.5 font-medium tracking-wide text-black-renovacom transition-all hover:border-green-renovacom hover:bg-green-renovacom xl:text-xl',
+                'font-regular flex w-fit items-center rounded-full border-2 border-black-renovacom bg-transparent px-5 py-3.5 tracking-wide text-black-renovacom transition-all hover:border-green-renovacom hover:bg-green-renovacom xl:text-xl',
                 className,
             )}
         >

@@ -1,13 +1,16 @@
-import {ChevronRightIcon } from "@heroicons/react/24/solid"
-import { Link } from "@inertiajs/react"
-import type { InertiaLinkProps } from "@inertiajs/react"
-const PrimaryLink = (props:InertiaLinkProps) =>{
+import { ChevronRightIcon } from '@heroicons/react/24/solid';
+import { Link } from '@inertiajs/react';
+import type { InertiaLinkProps } from '@inertiajs/react';
+const PrimaryLink = (props: InertiaLinkProps) => {
     return (
-        <Link {...props} className="bg-green-renovacom border-2 border-green-renovacom xl:text-xl hover:bg-transparent hover:border-white hover:text-white transition-all px-5 py-3.5 font-medium text-black-renovacom rounded-full flex items-center tracking-wide w-fit">
-        {props.children}
-        <ChevronRightIcon className="size-5 ml-2 -mr-1"/>
+        <Link
+            {...props}
+            className="flex w-fit items-center rounded-full border-2 border-green-renovacom bg-green-renovacom px-5 py-3.5 font-normal tracking-wide text-black-renovacom transition-all hover:border-white hover:bg-transparent hover:text-white xl:text-xl"
+        >
+            {props.children}
+            <ChevronRightIcon className="-mr-1 ml-2 size-5" />
         </Link>
-    )
-}
+    );
+};
 
-export default PrimaryLink; 
+export default PrimaryLink;
