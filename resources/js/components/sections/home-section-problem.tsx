@@ -16,7 +16,8 @@ const HomeSectionProblem = () => {
         const handleScroll = () => {
             if (!sectionRef.current) return;
             const { top } = sectionRef.current.getBoundingClientRect();
-            if (top <= 0 && animationState === 'idle') {
+            const scrollActivation = sectionRef.current.clientHeight / 2;
+            if (top <= -scrollActivation && animationState === 'idle') {
                 setAnimationState('in');
             }
         };
@@ -88,7 +89,7 @@ const HomeSectionProblem = () => {
                 >
                     <h3
                         className={cn(
-                            'text-center font-space-grotesk text-4xl leading-12 font-semibold text-white! lg:text-7xl lg:leading-24',
+                            'text-center font-space-grotesk text-4xl leading-12 font-medium text-white! lg:text-7xl lg:leading-24',
                             getAnimationClass('text-card'),
                         )}
                     >
@@ -128,11 +129,11 @@ const HomeSectionProblem = () => {
                 <div
                     ref={cardBottomToTopRef}
                     className={cn(
-                        'flex h-95 w-95 -translate-x-[5.5%] items-center justify-center rounded-renovacom-xl bg-gray-renovacom p-10 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275 lg:translate-x-0 lg:p-0',
+                        'flex h-95 w-95 -translate-x-[5.5%] items-center justify-center rounded-renovacom-xl bg-gray-renovacom p-10 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275 lg:translate-x-0 lg:p-20',
                         getAnimationClass('card-bottom-to-top'),
                     )}
                 >
-                    <h3 className="max-w-3xl font-space-grotesk text-2xl text-white lg:text-justify lg:text-5xl lg:leading-16">
+                    <h3 className="lg:text-auto max-w-5xl items-center text-justify text-2xl font-normal tracking-tight text-white lg:text-7xl lg:leading-16">
                         Renovacom implementa un{' '}
                         <span className="text-green-renovacom">sistema de adquisición de datos autónoma y análisis con IA</span> que permite detectar
                         y clasificar daños en 48 horas.
