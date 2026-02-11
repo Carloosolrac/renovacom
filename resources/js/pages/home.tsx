@@ -94,7 +94,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </div>
             </section>
 
-            <section className={cn('space-y-14', getWidthClasses())}>
+            <section className={cn('space-y-5 lg:space-y-7', getWidthClasses())}>
                 <Paragraph className="text-center font-medium">Inspecciones técnicas avanzadas</Paragraph>
                 <Title className="text-center">Soluciones de inspección para reducir riesgos y aumentar rendimiento</Title>
                 <Paragraph className="mx-auto text-center lg:max-w-4/6">
@@ -123,8 +123,8 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
 
                 <div role="list">
                     {[
-                        'Seguimiento a la consturcción',
-                        'DESARROLLO DE GEMEOS VIRTUALES PARA LA DIGITALIZACIÓN DE ACTIVOS',
+                        'Seguimiento a la construcción',
+                        'DESARROLLO DE gemelos VIRTUALES PARA LA DIGITALIZACIÓN DE ACTIVOS',
                         'SERVICIOS DE INGENIERÍA Y CONSULTORÍA A MEDIDA',
                     ].map((item, index) => (
                         <div
@@ -138,7 +138,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                                     'flex flex-col items-center justify-between gap-4 border-b-2 border-black-renovacom py-8 text-black-renovacom group-hover:text-white lg:flex-row lg:gap-0',
                                 )}
                             >
-                                <h3 className="my-4 font-space-grotesk text-3xl uppercase lg:max-w-4/6 lg:text-4xl">{item}</h3>
+                                <h3 className="my-4 font-space-grotesk text-3xl font-medium uppercase lg:max-w-4/6 lg:text-4xl">{item}</h3>
 
                                 <PrimaryWhiteLink
                                     role="button"
@@ -161,8 +161,18 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </div>
 
                 <div className={cn(getWidthClasses(), 'flex flex-col items-center justify-end gap-4 lg:flex-row')}>
-                    <SecondaryLink aria-label="Conocer nuestros servicios">Cononce nuestros servicios</SecondaryLink>
-                    <PrimaryBlackLink aria-label="Contactar para hablar">Hablemos</PrimaryBlackLink>
+                    <SecondaryLink
+                        href="#contacto"
+                        aria-label="Conocer nuestros servicios"
+                    >
+                        Cononce nuestros servicios
+                    </SecondaryLink>
+                    <PrimaryBlackLink
+                        href="#contacto"
+                        aria-label="Contactar para hablar"
+                    >
+                        Hablemos
+                    </PrimaryBlackLink>
                 </div>
             </section>
 

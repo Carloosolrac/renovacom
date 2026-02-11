@@ -1,6 +1,6 @@
+import HTMLReactParser from 'html-react-parser/lib/index';
 import { useCallback } from 'react';
 import { cn } from '@/lib/utils';
-import HTMLReactParser from 'html-react-parser/lib/index';
 
 export interface CardAccordeonProps {
     background: string;

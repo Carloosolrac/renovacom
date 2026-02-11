@@ -130,7 +130,7 @@ const Header = () => {
                     <div className="border-t border-white pt-6">
                         <PrimaryLink
                             href="#contacto"
-                            className="block text-center"
+                            className="w-full text-center"
                             aria-label="Agendar una reunión"
                         >
                             Agendar una reunión
@@ -138,10 +138,10 @@ const Header = () => {
                     </div>
                     <div className="flex gap-6 pt-6">
                         <Link>
-                            <InstagramIcon className="size-7" />
+                            <InstagramIcon className="size-7 text-white" />
                         </Link>
                         <Link>
-                            <LinkedInIcon className="size-6" />
+                            <LinkedInIcon className="size-6 text-white" />
                         </Link>
                     </div>
                 </nav>

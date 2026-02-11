@@ -20,7 +20,7 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
             case 2:
                 return {
                     title: 'text-5xl',
-                    description: 'text-lg! leading-6! lg:leading-7!',
+                    description: 'lg:text-2xl! md:text-2xl! leading-6! md:leading-7! lg:leading-8!',
                     parentContanier: 'top-1/2',
                     containerCard: 'h-1/2 gap-4 p-2',
                     card: 'h-full ',
