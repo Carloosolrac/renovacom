@@ -63,14 +63,12 @@ const Header = () => {
                                 </Link>
                             </li>
                         ))}
-                        <li>
+                        <li className="flex items-center gap-4">
                             <Link aria-label="Enlace Instagram">
-                                <InstagramIcon className="size-5 fill-white transition-all hover:fill-green-renovacom" />
+                                <InstagramIcon className="size-5 text-white transition-all hover:text-green-renovacom!" />
                             </Link>
-                        </li>
-                        <li>
                             <Link aria-label="Enlace LinkedIn">
-                                <LinkedInIcon className="size-5 fill-white transition-all hover:fill-green-renovacom" />
+                                <LinkedInIcon className="size-5 text-white transition-all hover:text-green-renovacom!" />
                             </Link>
                         </li>
                         <li>

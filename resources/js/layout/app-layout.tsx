@@ -17,7 +17,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
             </div>
 
             <Header />
-            <main className="flex-1 space-y-14">
+            <main className="flex-1 space-y-14 bg-background">
                 {children}
                 <LayoutForm />
             </main>
