@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className="relative overflow-hidden bg-black-renovacom py-20">
             <div className={cn(getWidthClasses(), 'grid grid-cols-2 gap-14 lg:grid-cols-4 lg:gap-0')}>
                 <svg
-                    className="right-0 hidden min-h-full min-w-full lg:absolute lg:-top-5 lg:-left-76 lg:block lg:scale-[1.1] xl:left-0 xl:scale-[1] 2xl:scale-[1.1]"
+                    className="right-0 z-0 hidden min-h-full min-w-full lg:absolute lg:-top-5 lg:-left-76 lg:block lg:scale-[1.1] xl:left-0 xl:scale-[1] 2xl:scale-[1.1]"
                     width="1440"
                     height="371"
                     viewBox="0 0 1440 371"
@@ -79,16 +79,16 @@ const Footer = () => {
                 <img
                     src="/assets/logo-footer.png"
                     alt="Logo Renovacom"
-                    className="col-span-2"
+                    className="col-span-2 my-auto"
                 />
-                <div className="space-y-8 lg:mx-auto lg:w-1/2">
+                <div className="z-10 space-y-8 lg:mx-auto lg:w-1/2">
                     <h3 className="text-xl font-semibold text-white">Navegación</h3>
                     <nav>
                         <ul>
                             {navigationItems.map((item) => (
                                 <li
                                     key={item.name}
-                                    className="mb-4 text-lg text-white"
+                                    className="mb-4 text-lg text-white hover:text-green-renovacom"
                                 >
                                     <Link href={item.href}>{item.name}</Link>
                                 </li>
@@ -96,18 +96,32 @@ const Footer = () => {
                         </ul>
                     </nav>
                 </div>
-                <div className="space-y-8 lg:mx-auto lg:w-1/2">
+                <div className="z-10 space-y-8 lg:mx-auto lg:w-1/2">
                     <h3 className="text-xl font-semibold text-white">Contacto</h3>
                     <ul role="list">
-                        {['info@renovacom.cl', '+569 1234 5678', 'LinkedIn'].map((item) => (
-                            <li
-                                role="listitem"
-                                key={item}
-                                className="mb-4 text-lg text-white"
+                        <li
+                            role="listitem"
+                            className="mb-4 text-lg text-white hover:text-green-renovacom"
+                        >
+                            <Link href={'mailto:info@renovacom.cl'}>info@renovacom.cl</Link>
+                        </li>
+                        <li
+                            role="listitem"
+                            className="mb-4 text-lg text-white hover:text-green-renovacom"
+                        >
+                            <Link href={'tel:+56912345678'}>+569 1234 5678</Link>
+                        </li>
+                        <li
+                            role="listitem"
+                            className="mb-4 text-lg text-white hover:text-green-renovacom"
+                        >
+                            <Link
+                                href={'https://www.linkedin.com/company/renovacom/'}
+                                target="_blank"
                             >
-                                {item}
-                            </li>
-                        ))}
+                                LinkedIn
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
