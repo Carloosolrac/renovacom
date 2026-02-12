@@ -59,13 +59,13 @@ const HomeSectionProblem = () => {
                         if (el) cardsLeftRef.current[0] = el;
                     }}
                     className={cn(
-                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
+                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
                         getAnimationClass('card-left'),
                     )}
                 ></div>
 
-                <div className="h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275"></div>
-                <div className="h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275"></div>
+                <div className="h-95 w-95 rounded-renovacom-xl bg-gray-renovacom md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275"></div>
+                <div className="h-95 w-95 rounded-renovacom-xl bg-gray-renovacom md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275"></div>
             </div>
 
             <div className="flex items-center gap-6">
@@ -74,7 +74,7 @@ const HomeSectionProblem = () => {
                         if (el) cardsLeftRef.current[1] = el;
                     }}
                     className={cn(
-                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
+                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
                         getAnimationClass('card-left'),
                     )}
                 ></div>
@@ -83,7 +83,7 @@ const HomeSectionProblem = () => {
                 <div
                     ref={cardCenterRef}
                     className={cn(
-                        'flex h-95 w-95 items-center justify-center rounded-renovacom-xl bg-gray-renovacom px-5 uppercase lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:max-w-275 lg:min-w-275',
+                        'flex h-95 w-95 items-center justify-center rounded-renovacom-xl bg-gray-renovacom px-5 uppercase md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:max-w-275 lg:min-w-275',
                         getAnimationClass('card-center'),
                     )}
                 >
@@ -100,7 +100,7 @@ const HomeSectionProblem = () => {
                 <div
                     ref={cardRightRef}
                     className={cn(
-                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
+                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
                         getAnimationClass('card-right'),
                     )}
                 ></div>
@@ -112,7 +112,7 @@ const HomeSectionProblem = () => {
                         if (el) cardsLeftRef.current[2] = el;
                     }}
                     className={cn(
-                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
+                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
                         getAnimationClass('card-left'),
                     )}
                 ></div>
@@ -120,7 +120,7 @@ const HomeSectionProblem = () => {
                 <div
                     ref={cardBottomRef}
                     className={cn(
-                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
+                        'h-95 w-95 rounded-renovacom-xl bg-gray-renovacom md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
                         getAnimationClass('card-bottom'),
                     )}
                 ></div>
@@ -129,7 +129,7 @@ const HomeSectionProblem = () => {
                 <div
                     ref={cardBottomToTopRef}
                     className={cn(
-                        'flex h-95 w-95 -translate-x-[5.5%] items-center justify-center rounded-renovacom-xl bg-gray-renovacom p-10 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275 lg:translate-x-0 lg:p-20',
+                        'flex h-95 w-95 -translate-x-[5.5%] items-center justify-center rounded-renovacom-xl bg-gray-renovacom p-10 md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275 lg:translate-x-0 lg:p-20',
                         getAnimationClass('card-bottom-to-top'),
                     )}
                 >
@@ -144,7 +144,7 @@ const HomeSectionProblem = () => {
             <div
                 ref={cardBottomBottomRef}
                 className={cn(
-                    'absolute left-1/2 h-95 w-95 -translate-x-1/2 translate-y-[105.5%] rounded-renovacom-xl bg-gray-renovacom lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275 lg:translate-y-[103%]',
+                    'absolute left-1/2 h-95 w-95 -translate-x-1/2 translate-y-[105.5%] rounded-renovacom-xl bg-gray-renovacom md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275 lg:translate-y-[103%]',
                     getAnimationClass('card-bottom-bottom'),
                 )}
             ></div>

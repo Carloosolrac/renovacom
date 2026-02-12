@@ -97,7 +97,7 @@ const Header = () => {
             </header>
             <div
                 className={cn(
-                    'fixed top-0 right-0 z-50 flex min-h-lvh w-[99%] flex-col gap-10 rounded-l-4xl border-l-2 border-white bg-gray-renovacom p-7 backdrop-blur-xl transition-all',
+                    'fixed top-0 right-0 z-50 flex min-h-lvh w-full flex-col gap-10 rounded-l-4xl border-l-2 border-white bg-gray-renovacom p-7 backdrop-blur-xl transition-all',
                     {
                         'translate-x-0': toggleMenu,
                         'translate-x-full': !toggleMenu,

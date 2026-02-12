@@ -32,17 +32,17 @@ const Home = () => {
                 innerAnimationText={true}
                 characteristics={['Inteligencia operativa para activos renovables', 'Sistema de adquisición de datos autónoma']}
             />
-            <section className={cn(getWidthClasses(), 'bg-white')}>
+            <section className={cn(getWidthClasses())}>
                 <ul
                     role="list"
-                    className="flex flex-col flex-wrap items-center justify-around gap-8 text-3xl text-black-renovacom md:flex-row"
+                    className="flex flex-row items-center justify-around gap-2 text-3xl text-black-renovacom md:flex-row lg:gap-8"
                 >
                     {['Agilidad', 'Precisión', 'Seguridad', 'Autonomía'].map((item, index) => (
                         <Fragment key={index}>
-                            <li className="flex items-center gap-4">{item}</li>
+                            <li className="flex items-center gap-4 text-xs md:text-lg lg:text-2xl">{item}</li>
                             {index < 3 && (
                                 <li>
-                                    <StarIcon className="size-6 fill-black-renovacom" />
+                                    <StarIcon className="size-3 fill-black-renovacom lg:size-6" />
                                 </li>
                             )}
                         </Fragment>
@@ -89,8 +89,18 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </CardAccordeonContainer>
 
                 <div className="flex flex-col items-center justify-end gap-5 py-10 md:flex-row">
-                    <SecondaryLink href="#contacto" aria-label="Conocer nuestra metodología">Conoce nuestra metodología</SecondaryLink>
-                    <PrimaryBlackLink href="#contacto" aria-label="Contactar para hablar sobre nuestros servicios">Hablemos</PrimaryBlackLink>
+                    <SecondaryLink
+                        href="#contacto"
+                        aria-label="Conocer nuestra metodología"
+                    >
+                        Conoce nuestra metodología
+                    </SecondaryLink>
+                    <PrimaryBlackLink
+                        href="#contacto"
+                        aria-label="Contactar para hablar sobre nuestros servicios"
+                    >
+                        Hablemos
+                    </PrimaryBlackLink>
                 </div>
             </section>
 

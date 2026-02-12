@@ -1,5 +1,5 @@
 export const getWidthClasses = () => {
-    return 'max-w-sm md:max-w-2xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto w-full';
+    return 'max-w-sm md:max-w-2xl px-1 sm:px-0 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto w-full';
 };
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
