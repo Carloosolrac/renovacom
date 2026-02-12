@@ -100,6 +100,7 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
                             buttonSize={computedButtonSize}
                             aria-label={`Conocer más sobre ${title}`}
                             className="border!"
+                            href="#contacto"
                         >
                             Contáctanos
                         </PrimaryWhiteLink>

@@ -89,8 +89,8 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </CardAccordeonContainer>
 
                 <div className="flex flex-col items-center justify-end gap-5 py-10 md:flex-row">
-                    <SecondaryLink aria-label="Conocer nuestra metodología">Conoce nuestra metodología</SecondaryLink>
-                    <PrimaryBlackLink aria-label="Contactar para hablar sobre nuestros servicios">Hablemos</PrimaryBlackLink>
+                    <SecondaryLink href="#contacto" aria-label="Conocer nuestra metodología">Conoce nuestra metodología</SecondaryLink>
+                    <PrimaryBlackLink href="#contacto" aria-label="Contactar para hablar sobre nuestros servicios">Hablemos</PrimaryBlackLink>
                 </div>
             </section>
 
@@ -141,6 +141,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                                 <h3 className="my-4 font-space-grotesk text-3xl font-medium uppercase lg:max-w-4/6 lg:text-4xl">{item}</h3>
 
                                 <PrimaryWhiteLink
+                                    href="#contacto"
                                     role="button"
                                     className="hidden group-hover:flex"
                                     aria-label={`Conocer más sobre ${item}`}
@@ -149,6 +150,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                                 </PrimaryWhiteLink>
 
                                 <SecondaryLink
+                                    href="#contacto"
                                     role="button"
                                     className="group-hover:hidden lg:hidden"
                                     aria-label={`Conocer más sobre ${item}`}

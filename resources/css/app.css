@@ -82,3 +82,7 @@
     /* Width */
     --spacing-10xl: 2420px;
 }
+
+:root {
+    scroll-behavior: smooth;
+}
