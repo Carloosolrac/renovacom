@@ -10,6 +10,9 @@ export default function InfiniteSlider({ items }: { items: { src: string; alt: s
                         <img
                             src={image.src}
                             alt={image.alt}
+                            style={{
+                                filter: 'brightness(0) saturate(100%) invert(20%) sepia(58%) saturate(664%) hue-rotate(148deg) brightness(94%) contrast(94%)',
+                            }}
                         />
                     </li>
                 ))}
@@ -24,6 +27,9 @@ export default function InfiniteSlider({ items }: { items: { src: string; alt: s
                         <img
                             src={image.src}
                             alt={image.alt}
+                            style={{
+                                filter: 'brightness(0) saturate(100%) invert(20%) sepia(58%) saturate(664%) hue-rotate(148deg) brightness(94%) contrast(94%)',
+                            }}
                         />
                     </li>
                 ))}
@@ -38,6 +44,9 @@ export default function InfiniteSlider({ items }: { items: { src: string; alt: s
                         <img
                             src={image.src}
                             alt={image.alt}
+                            style={{
+                                filter: 'brightness(0) saturate(100%) invert(20%) sepia(58%) saturate(664%) hue-rotate(148deg) brightness(94%) contrast(94%)',
+                            }}
                         />
                     </li>
                 ))}
