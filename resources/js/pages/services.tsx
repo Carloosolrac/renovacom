@@ -135,7 +135,12 @@ const Service = () => {
                     </div>
 
                     <div className="flex justify-end">
-                        <PrimaryBlackLink aria-label="Hablar sobre tu proyecto">Hablemos de tu proyecto</PrimaryBlackLink>
+                        <PrimaryBlackLink
+                            href={'#contacto'}
+                            aria-label="Hablar sobre tu proyecto"
+                        >
+                            Habla con un Especialista
+                        </PrimaryBlackLink>
                     </div>
                 </div>
             </section>
@@ -148,19 +153,19 @@ const Service = () => {
                         {
                             title: 'Monitoreo y control de construcción (EPC)',
                             description:
-                                'Detectamos fallas a nivel de celda mediante termografía y combinamos medición de suciedad en un solo vuelo para estimar pérdidas y optimizar mantenimiento.',
+                                'Realizamos vuelos periódicos para generar ortomosaicos y modelos 3D actualizados, apoyando el control de avance, la verificación técnica y la documentación as-built.',
                             image: '/assets/services/monitoreo-y-control.png',
                         },
                         {
                             title: 'DIGITALIZACIÓN DE ACTIVOS Y GEMELOS VIRTUALES',
                             description:
-                                'Detectamos fallas a nivel de celda mediante termografía y combinamos medición de suciedad en un solo vuelo para estimar pérdidas y optimizar mantenimiento.',
+                                'Creamos la base digital de sus activos mediante nubes de puntos y modelos 3D fotorrealistas, facilitando la planificación, el análisis de riesgos y la gestión técnica.',
                             image: '/assets/services/digitalizacion-de-activos.png',
                         },
                         {
                             title: 'CONSULTORÍA E INGENIERÍA A MEDIDA',
                             description:
-                                'Detectamos fallas a nivel de celda mediante termografía y combinamos medición de suciedad en un solo vuelo para estimar pérdidas y optimizar mantenimiento.',
+                                'Aplicamos experiencia sectorial y dominio tecnológico para resolver desafíos específicos, desde análisis de data O&M hasta el diseño de programas de monitoreo adaptados a cada proyecto.',
                             image: '/assets/services/consultoria-e-ingenieria.png',
                         },
                     ].map((item, index) => (
@@ -175,10 +180,13 @@ const Service = () => {
 
             {/* Servicios complementarios */}
             <section className={cn(getWidthClasses(), 'space-y-5')}>
-                <Paragraph className="text-center">¿Listo para tomar decisiones basadas en datos en información confiable?</Paragraph>
+                <Paragraph className="text-center font-space-grotesk font-medium">
+                    ¿Listo para tomar decisiones basadas en datos e información confiable?
+                </Paragraph>
                 <Title className="text-center">De la Captura de Datos a la Decisión Estratégica</Title>
                 <Paragraph className="text-center">
-                    En Renovacom entregamos la capa de inteligencia que su operación necesita para ser más predictiva y eficiente
+                    En Renovacom entregamos la capa de inteligencia <br className="hidden lg:block" /> que su operación necesita para ser más
+                    predictiva y eficiente
                 </Paragraph>
                 <SecondaryLink
                     className="mx-auto"
@@ -192,6 +200,6 @@ const Service = () => {
     );
 };
 
-Service.layout = (page: React.ReactNode) => <AppLayout>{page}</AppLayout>;
+Service.layout = (page: React.ReactNode) => <AppLayout layoutFormWithCTA={false}>{page}</AppLayout>;
 
 export default Service;

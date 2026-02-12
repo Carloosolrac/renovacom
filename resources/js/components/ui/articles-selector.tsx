@@ -53,7 +53,7 @@ const ArticlesSelector = ({ items }: ArticlesSelectorProps) => {
                     </button>
                 ))}
             </div>
-            <div>
+            <div className="space-y-4">
                 <Paragraph>{items[selectedArticle]?.precontent}</Paragraph>
                 <div
                     role="article"

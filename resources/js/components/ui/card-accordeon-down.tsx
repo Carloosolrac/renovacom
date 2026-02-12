@@ -71,7 +71,7 @@ const CardAccordeonDown = ({ image, icon, title, contentable, cardNumber }: Card
 
                 <div className="flex items-start gap-5">
                     <p className="text-3xl font-semibold text-white lg:text-5xl">{cardNumber}.</p>
-                    <h1 className="font-space-grotesk text-3xl font-medium text-white uppercase lg:text-5xl">{title}</h1>
+                    <h1 className="font-space-grotesk text-3xl font-semibold text-white uppercase lg:text-5xl">{title}</h1>
                 </div>
 
                 <ul className={cn('mx-5 grid list-disc gap-10 text-white lg:grid-cols-3')}>
@@ -81,7 +81,7 @@ const CardAccordeonDown = ({ image, icon, title, contentable, cardNumber }: Card
                             className="space-y-3"
                         >
                             <h2 className="text-2xl font-semibold text-white">{item.title}</h2>
-                            <p className="text-white">{item.content}</p>
+                            <p className="text-base text-white lg:text-lg">{item.content}</p>
                         </li>
                     ))}
                 </ul>

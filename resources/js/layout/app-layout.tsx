@@ -2,7 +2,7 @@ import Footer from '@/components/layout/footer';
 import Header from '@/components/layout/header';
 import LayoutForm from '@/components/sections/layout-form';
 
-const AppLayout = ({ children }: { children: React.ReactNode }) => {
+const AppLayout = ({ children, layoutFormWithCTA = true }: { children: React.ReactNode; layoutFormWithCTA?: boolean }) => {
     return (
         <div className="flex min-h-screen flex-col">
             {/* Debug Tailwind Breakpoints */}
@@ -19,7 +19,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
             <Header />
             <main className="flex-1 space-y-14 bg-background">
                 {children}
-                <LayoutForm />
+                <LayoutForm withCTA={layoutFormWithCTA} />
             </main>
             <Footer />
         </div>

@@ -3,15 +3,20 @@ import { cn } from '@/lib/utils';
 import { getWidthClasses } from '@/utils/utils';
 import Title from '../ui/title';
 
-const LayoutForm = () => {
+const LayoutForm = ({ withCTA = true }: { withCTA?: boolean }) => {
     return (
         <section
-            className="space-y-10 border-t-2 border-gray-renovacom pt-10"
+            className={cn('space-y-10 pt-10', {
+                'border-t-2 border-gray-renovacom': withCTA,
+            })}
             id="contacto"
         >
-            <div className={cn(getWidthClasses(), 'text-center')}>
-                <Title className="mx-auto xl:max-w-5/6">Hablemos y coordinemos una reunión</Title>
-            </div>
+            {withCTA && (
+                <div className={cn(getWidthClasses(), 'text-center')}>
+                    <Title className="mx-auto xl:max-w-5/6">Hablemos y coordinemos una reunión</Title>
+                </div>
+            )}
+
             <div
                 className="bg-cover bg-center py-10"
                 style={{

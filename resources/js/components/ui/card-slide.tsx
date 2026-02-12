@@ -78,7 +78,7 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
                         )}
                     >
                         <h2
-                            className={`max-w-5/6 font-space-grotesk uppercase ${computedSize.title} font-semibold ${hasWhiteTitle ? 'text-white' : 'text-green-renovacom'}`}
+                            className={`max-w-5/6 font-space-grotesk uppercase ${computedSize.title} font-medium ${hasWhiteTitle ? 'text-white' : 'text-green-renovacom'}`}
                         >
                             {title}
                         </h2>
@@ -99,8 +99,9 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
                         <PrimaryWhiteLink
                             buttonSize={computedButtonSize}
                             aria-label={`Conocer más sobre ${title}`}
+                            className="border!"
                         >
-                            Conoce más
+                            Contáctanos
                         </PrimaryWhiteLink>
                     </div>
                     <div className={cn('max-w-5/6 min-w-5/6 rounded-3xl bg-gray-renovacom', computedSize.card)}></div>

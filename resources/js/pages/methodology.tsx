@@ -35,17 +35,19 @@ El resultado final es una operación que pasa de ser reactiva a ser  <strong>pre
                 title={bannerTitle}
                 pretitle="Reduce riesgos, anticipa fallas y optimiza la gestión de O&M en activos renovables."
                 characteristics={[
-                    'Captura autónoma de datos',
-                    'Análisis de datos empleando IA',
-                    'Validación humana experta',
-                    'Reportes con información accionable',
+                    'Captura autónoma de datos.',
+                    'Análisis de datos empleando IA.',
+                    'Validación humana experta.',
+                    'Reportes con información accionable.',
                 ]}
                 backgroundImage="/assets/methodology/hero-banner.gif"
                 overlay={true}
             />
 
             <section className={cn(getWidthClasses(), 'space-y-14')}>
-                <Title>De la Captura a la Decisión: Nuestro Proceso de Ingeniería de Datos</Title>
+                <Title>
+                    De la Captura a la Decisión: <br /> Nuestro Proceso de Ingeniería de Datos
+                </Title>
                 <CardAccordeonDownContainer>
                     <CardAccordeonDown
                         image="/assets/captura-de-datos.png"

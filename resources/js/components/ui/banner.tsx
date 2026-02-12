@@ -1,9 +1,9 @@
 import HTMLReactParser from 'html-react-parser/lib/index';
+import { useCallback } from 'react';
 import { cn } from '@/lib/utils';
 import { getWidthClasses } from '@/utils/utils';
 import { StarIcon } from '../icons/icons';
 import PrimaryLink from './primary-link';
-import { useCallback } from 'react';
 
 interface BannerProps {
     pretitle?: string;
@@ -102,7 +102,7 @@ const Banner = ({
                         {characteristics.map((item) => (
                             <li
                                 key={item}
-                                className="flex items-center gap-4 font-space-grotesk text-xl xl:text-2xl"
+                                className="flex items-center gap-4 text-xl xl:text-2xl"
                             >
                                 <StarIcon className="size-6 xl:size-4" />
                                 {item}
