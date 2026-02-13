@@ -12,7 +12,7 @@ interface BannerProps {
     buttonLink?: string;
     characteristics?: string[];
     overlay?: boolean;
-    backgroundImage: string;
+    backgroundVideo: string;
     innerAnimationText?: boolean;
 }
 
@@ -23,7 +23,7 @@ const Banner = ({
     buttonLink,
     characteristics,
     overlay = false,
-    backgroundImage,
+    backgroundVideo,
     innerAnimationText = false,
 }: BannerProps) => {
     const applyAnimatedClass = useCallback(
@@ -39,11 +39,16 @@ const Banner = ({
             className={cn(
                 'relative mx-auto flex min-h-96 items-center justify-center bg-cover bg-center bg-no-repeat pt-32 pb-10 md:h-lvh lg:pt-20 xl:min-h-200 xl:bg-size-[130%] 2xl:bg-size-[150%]',
             )}
-            style={{
-                backgroundImage: `url(${backgroundImage})`,
-                backgroundPosition: 'bottom',
-            }}
         >
+            {/* Background Video */}
+            <video
+                className="absolute top-0 left-0 h-full w-full object-cover"
+                src={backgroundVideo}
+                autoPlay
+                loop
+                muted
+            />
+
             {/* Overlay */}
             {overlay && <div className="via-13%-[#063545] absolute top-0 left-0 h-full w-full bg-linear-to-r from-[#062631]/90 to-transparent"></div>}
 

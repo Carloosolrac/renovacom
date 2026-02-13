@@ -4,7 +4,6 @@ import CardSlide from '@/components/ui/card-slide';
 import CardSlideContainer from '@/components/ui/card-slide-container';
 import Paragraph from '@/components/ui/paragraph';
 import PrimaryBlackLink from '@/components/ui/primary-black-link';
-import PrimaryWhiteLink from '@/components/ui/primary-white-link';
 import SecondaryLink from '@/components/ui/secondary-link';
 import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
@@ -15,7 +14,7 @@ const Service = () => {
     return (
         <>
             <Banner
-                backgroundImage="/assets/services/hero-banner.gif"
+                backgroundVideo="/assets/services/video-hero-servicios.mp4"
                 pretitle="Servicios de inspección y consultoría para la gestión de activos renovables."
                 title="Inspecciones inteligentes para una <span className='text-green-renovacom'> operación optimizada</span>"
                 characteristics={[

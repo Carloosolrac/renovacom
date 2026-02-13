@@ -40,7 +40,7 @@ El resultado final es una operación que pasa de ser reactiva a ser  <strong>pre
                     'Validación humana experta.',
                     'Reportes con información accionable.',
                 ]}
-                backgroundImage="/assets/methodology/hero-banner.gif"
+                backgroundVideo="/assets/methodology/video-hero-metodologia.mp4"
                 overlay={true}
             />
 

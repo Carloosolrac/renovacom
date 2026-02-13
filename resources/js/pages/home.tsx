@@ -26,7 +26,7 @@ const Home = () => {
         <>
             <Banner
                 title={txt}
-                backgroundImage="/assets/home/hero-home.gif"
+                backgroundVideo="/assets/home/video-hero-home.mp4"
                 buttonLink="#contacto"
                 buttonText="Hablemos"
                 innerAnimationText={true}
