@@ -10,15 +10,15 @@ const Footer = () => {
         <footer className="relative overflow-hidden bg-black-renovacom py-20">
             <div className={cn(getWidthClasses(), 'grid grid-cols-2 gap-14 lg:grid-cols-4 lg:gap-0')}>
                 <svg
-                    className="right-0 z-0 hidden min-h-full min-w-full lg:absolute lg:-top-5 lg:-left-76 lg:block lg:scale-[1.1] xl:left-0 xl:scale-[1] 2xl:scale-[1.1]"
-                    width="1440"
+                    className="right-0 z-0 hidden w-full! lg:absolute lg:-top-5 lg:block lg:scale-[1.1] xl:left-0 xl:scale-[1] 2xl:scale-[1.1]"
+                    width="100%"
                     height="371"
-                    viewBox="0 0 1440 371"
+                    viewBox="0 0 100% 371"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <line
-                        x1="1440"
+                        x1="100%"
                         y1="81"
                         y2="81"
                         stroke="white"
@@ -26,7 +26,7 @@ const Footer = () => {
                         strokeWidth="2"
                     />
                     <line
-                        x1="1440"
+                        x1="100%"
                         y1="327"
                         y2="327"
                         stroke="white"
@@ -34,42 +34,42 @@ const Footer = () => {
                         strokeWidth="2"
                     />
                     <line
-                        x1="1402"
-                        y1="430"
-                        x2="1402"
-                        y2="-4.37114e-08"
+                        x1="90%"
+                        y1="700"
+                        x2="90%"
+                        y2="1"
                         stroke="white"
                         strokeOpacity="0.5"
                         strokeWidth="2"
                     />
                     <line
-                        x1="1395"
+                        x1="90.4%"
                         y1="327"
-                        x2="1409"
+                        x2="89.6%"
                         y2="327"
                         stroke="#F8FEFF"
                         strokeWidth="2"
                     />
                     <line
-                        x1="1402"
+                        x1="90%"
                         y1="334"
-                        x2="1402"
+                        x2="90%"
                         y2="320"
                         stroke="#F8FEFF"
                         strokeWidth="2"
                     />
                     <line
-                        x1="1395"
+                        x1="90.4%"
                         y1="81"
-                        x2="1409"
+                        x2="89.6%"
                         y2="81"
                         stroke="#F8FEFF"
                         strokeWidth="2"
                     />
                     <line
-                        x1="1402"
+                        x1="90%"
                         y1="88"
-                        x2="1402"
+                        x2="90%"
                         y2="74"
                         stroke="#F8FEFF"
                         strokeWidth="2"

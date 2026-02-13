@@ -31,7 +31,7 @@ const CardAccordeon = ({ background, number, icon, title, description, isFirst }
         >
             {/* Lines */}
             <svg
-                className="absolute -top-10 -left-16 w-200 md:-left-13 lg:top-0 lg:-left-9 xl:-left-4 2xl:left-0"
+                className="absolute -top-10 -left-16 z-0 w-200 md:-left-13 lg:top-0 lg:-left-9 xl:-left-4 2xl:left-0"
                 viewBox="0 0 716 654"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const CardAccordeon = ({ background, number, icon, title, description, isFirst }
             </svg>
 
             {/* Left side */}
-            <div className="flex max-w-22 min-w-22 flex-col justify-between transition-all md:max-w-24 md:min-w-24 lg:max-w-29 lg:min-w-29 xl:max-w-33 xl:min-w-33 2xl:max-w-40 2xl:min-w-40">
+            <div className="z-10 flex max-w-22 min-w-22 flex-col justify-between transition-all md:max-w-24 md:min-w-24 lg:max-w-29 lg:min-w-29 xl:max-w-33 xl:min-w-33 2xl:max-w-40 2xl:min-w-40">
                 <p className="font-space-grotesk text-5xl font-bold text-white">{number}.</p>
 
                 <div className="flex h-23 w-full items-center justify-center">
@@ -85,7 +85,7 @@ const CardAccordeon = ({ background, number, icon, title, description, isFirst }
             </div>
 
             {/* Right side */}
-            <div className="mt-18 ml-2 flex w-full flex-col justify-between gap-7 p-4 pl-6 md:mt-16 lg:mt-26 lg:gap-0">
+            <div className="z-10 mt-18 flex max-w-60 flex-col justify-between gap-7 p-4 pl-6 md:mt-16 md:ml-2 md:max-w-full lg:mt-26 lg:max-w-90 lg:min-w-90 lg:gap-0 xl:max-w-100 xl:min-w-100 2xl:max-w-110 2xl:min-w-110">
                 <h3 className="font-space-grotesk text-4xl font-semibold text-white uppercase lg:text-5xl lg:leading-16 2xl:text-6xl">{title}</h3>
 
                 <div className="font-space-grotesk text-white lg:text-xl xl:text-2xl">{HTMLReactParser(description)}</div>

@@ -153,7 +153,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                                 <PrimaryWhiteLink
                                     href="#contacto"
                                     role="button"
-                                    className="hidden group-hover:flex"
+                                    className="ml-auto hidden group-hover:flex"
                                     aria-label={`Conocer más sobre ${item}`}
                                 >
                                     Conoce más
@@ -162,7 +162,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                                 <SecondaryLink
                                     href="#contacto"
                                     role="button"
-                                    className="group-hover:hidden lg:hidden"
+                                    className="ml-auto group-hover:hidden lg:hidden"
                                     aria-label={`Conocer más sobre ${item}`}
                                 >
                                     Conoce más
@@ -172,7 +172,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                     ))}
                 </div>
 
-                <div className={cn(getWidthClasses(), 'flex flex-col items-center justify-end gap-4 lg:flex-row')}>
+                <div className={cn(getWidthClasses(), 'flex flex-col items-end justify-end gap-4 sm:flex-row lg:flex-row lg:items-center')}>
                     <SecondaryLink
                         href="#contacto"
                         aria-label="Conocer nuestros servicios"

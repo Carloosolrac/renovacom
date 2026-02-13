@@ -78,7 +78,7 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
     return (
         <div
             role="listitem"
-            className="group relative max-h-200 w-full max-w-150 cursor-pointer overflow-hidden rounded-3xl bg-cover bg-center lg:cursor-default"
+            className="group relative max-h-200 w-full cursor-pointer overflow-hidden rounded-3xl bg-cover bg-center lg:max-w-150 lg:cursor-default"
             style={{
                 backgroundImage: `url(${image})`,
                 height: HEIGHT_PER_ITEM,
@@ -88,6 +88,7 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
             <div className={cn('absolute flex h-full w-full flex-col', computedSize.parentContanier)}>
                 {/* Container cards 1 */}
                 <div className={cn('flex w-full items-center', computedSize.containerCard)}>
+                    {/* C1 */}
                     <div
                         className={cn(
                             'flex max-w-5/6 min-w-5/6 items-end justify-start rounded-3xl bg-gray-renovacom p-4 transition-all duration-500',
@@ -101,7 +102,7 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
                             {title}
                         </h2>
                     </div>
-
+                    {/* C2 */}
                     <div className={cn('max-w-5/6 min-w-5/6 rounded-3xl bg-gray-renovacom', computedSize.card)}></div>
                 </div>
 

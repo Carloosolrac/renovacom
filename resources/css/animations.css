@@ -81,16 +81,16 @@
 
 @keyframes cardBottomBottomIn {
     0% {
-        transform: translateY(120%) !important;
+        transform: translateY(150%);
     }
     90% {
-        transform: translateY(120%) !important;
+        transform: translateY(150%);
     }
     95% {
-        transform: translateY(110.8%) !important;
+        transform: translateY(103.5%);
     }
     100% {
-        transform: translateY(110.8%) !important;
+        transform: translateY(103.5%);
     }
 }
 
@@ -216,16 +216,13 @@
 
 @keyframes cardBottomBottomOut {
     0% {
-        transform: translateY(110.8%);
+        transform: translateY(103.5%);
     }
     5% {
-        transform: translateY(110.8%);
-    }
-    10% {
-        transform: translateY(120%);
+        transform: translateY(150%);
     }
     100% {
-        transform: translateY(120%);
+        transform: translateY(150%);
     }
 }
 
