@@ -67,7 +67,7 @@ const Home = () => {
                     <CardAccordeon
                         background="/assets/analisis-con-ia.png"
                         title={'Análisis de Datos con IA'}
-                        description="Detectamos lo crítico y priorizamos lo relevante. 
+                        description="Detectamos lo crítico y priorizamos lo relevante. <br/> <br/>
                         Procesamos grandes volúmenes de información mediante inteligencia artificial para identificar y clasificar fallas según tipo y severidad."
                         icon={'/assets/icons/ai.png'}
                     />
@@ -75,14 +75,14 @@ const Home = () => {
                         background="/assets/validacion-tecnica.png"
                         title="Validación Humana"
                         description="Tecnología respaldada por criterio profesional.
-
+ <br/> <br/>
 Nuestros ingenieros revisan y validan los hallazgos, asegurando diagnósticos confiables y recomendaciones con sustento técnico real."
                         icon="/assets/icons/eye.png"
                     />
                     <CardAccordeon
                         background="/assets/resultados-accionables.png"
                         title="Resultados Accionables e Integrables"
-                        description="Información lista para decidir y actuar.
+                        description="Información lista para decidir y actuar. <br/> <br/>
 Entregamos reportes claros y datos estructurados, compatibles con sus plataformas de gestión, para optimizar la planificación de O&M."
                         icon="/assets/icons/dashboard.png"
                     />
