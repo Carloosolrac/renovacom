@@ -9,7 +9,6 @@ import CardSlide from '@/components/ui/card-slide';
 import CardSlideContainer from '@/components/ui/card-slide-container';
 import CardStatistics from '@/components/ui/card-statistics';
 import CardStatisticsContainer from '@/components/ui/card-statistics-container';
-import InfiniteSlider from '@/components/ui/infinite-slider';
 import Paragraph from '@/components/ui/paragraph';
 import PrimaryBlackLink from '@/components/ui/primary-black-link';
 import PrimaryWhiteLink from '@/components/ui/primary-white-link';
@@ -17,6 +16,7 @@ import SecondaryLink from '@/components/ui/secondary-link';
 import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
+import { metodologia, servicios } from '@/routes';
 import { getWidthClasses } from '@/utils/utils';
 
 const Home = () => {
@@ -90,8 +90,11 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
 
                 <div className="flex flex-col items-center justify-end gap-5 py-10 md:flex-row">
                     <SecondaryLink
-                        href="#contacto"
+                        href={metodologia.get().url}
                         aria-label="Conocer nuestra metodología"
+                        prefetch={true}
+                        viewTransition={true}
+                        cacheFor="10s"
                     >
                         Conoce nuestra metodología
                     </SecondaryLink>
@@ -174,8 +177,11 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
 
                 <div className={cn(getWidthClasses(), 'flex flex-col items-end justify-end gap-4 sm:flex-row lg:flex-row lg:items-center')}>
                     <SecondaryLink
-                        href="#contacto"
+                        href={servicios.get().url}
                         aria-label="Conocer nuestros servicios"
+                        prefetch={true}
+                        viewTransition={true}
+                        cacheFor="10s"
                     >
                         Cononce nuestros servicios
                     </SecondaryLink>
@@ -223,7 +229,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </CardStatisticsContainer>
             </section>
 
-            <section className={cn(getWidthClasses())}>
+            {/* <section className={cn(getWidthClasses())}>
                 <InfiniteSlider
                     items={[
                         {
@@ -240,7 +246,7 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                         },
                     ]}
                 />
-            </section>
+            </section> */}
         </>
     );
 };

@@ -93,7 +93,7 @@ const HomeSectionProblem = () => {
                             getAnimationClass('text-card'),
                         )}
                     >
-                        Automatizamos la captura y análisis de datos, <span className="text-green-renovacom">para optimizar la Operación.</span>
+                        Automatizamos la captura y análisis de datos, <span className="text-green-renovacom">para optimizar la Operación</span>
                     </h3>
                 </div>
 
@@ -136,7 +136,7 @@ const HomeSectionProblem = () => {
                     <h3 className="lg:text-auto max-w-5xl items-center text-justify text-2xl font-normal tracking-tight text-white lg:text-7xl lg:leading-16">
                         Renovacom implementa un{' '}
                         <span className="text-green-renovacom">sistema de adquisición de datos autónoma y análisis con IA</span> que permite detectar
-                        y clasificar daños en 48 horas.
+                        y clasificar daños en 48 horas
                     </h3>
                 </div>
             </div>

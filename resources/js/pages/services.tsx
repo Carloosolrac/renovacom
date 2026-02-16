@@ -18,10 +18,10 @@ const Service = () => {
                 pretitle="Servicios de inspección y consultoría para la gestión de activos renovables."
                 title="Inspecciones inteligentes para una <span className='text-green-renovacom'> operación optimizada</span>"
                 characteristics={[
-                    'Inspecciones 100% automatizadas.',
-                    'Análisis de datos empleando IA.',
-                    'Entrega en 48 horas.',
-                    'Datos listos para tu gestión de activos.',
+                    'Inspecciones 100% automatizadas',
+                    'Análisis de datos empleando IA',
+                    'Entrega en 48 horas',
+                    'Datos listos para tu gestión de activos',
                 ]}
                 overlay={true}
             />
@@ -40,17 +40,17 @@ const Service = () => {
                                 {
                                     icon: '/assets/services/windmill/icon-1.png',
                                     title: 'Reporte de Priorización',
-                                    description: 'Listado de hallazgos clasificados por severidad y tipo de falla.',
+                                    description: 'Listado de hallazgos clasificados por severidad y tipo de falla',
                                 },
                                 {
                                     icon: '/assets/services/windmill/icon-2.png',
                                     title: 'Base de Datos Geoespacial',
-                                    description: 'Coordenadas exactas de cada anomalía  para ubicación precisa en campo.',
+                                    description: 'Coordenadas exactas de cada anomalía  para ubicación precisa en campo',
                                 },
                                 {
                                     icon: '/assets/services/windmill/icon-3.png',
                                     title: 'Recomendaciones de Acción',
-                                    description: 'Plan de intervención focalizado que prioriza tareas de mantenimiento y recursos.',
+                                    description: 'Plan de intervención focalizado que prioriza tareas de mantenimiento y recursos',
                                 },
                             ],
                         },
@@ -65,18 +65,18 @@ const Service = () => {
                                 {
                                     icon: '/assets/services/windmill/icon-1.png',
                                     title: 'Fallas Eléctricas y Térmicas',
-                                    description: 'Hotspots, diodos en corto, celdas defectuosas, string failures.',
+                                    description: 'Hotspots, diodos en corto, celdas defectuosas, string failures',
                                 },
                                 {
                                     icon: '/assets/services/windmill/icon-2.png',
                                     title: 'Soiling (Suciedad)',
                                     description:
-                                        'Mapeo de la distribución de suciedad en la planta con estimación cuantitativa de las pérdidas de generación.',
+                                        'Mapeo de la distribución de suciedad en la planta con estimación cuantitativa de las pérdidas de generación',
                                 },
                                 {
                                     icon: '/assets/services/windmill/icon-3.png',
                                     title: 'Daños Mecánicos',
-                                    description: 'Microfisuras, delaminación, daños por granizo.',
+                                    description: 'Microfisuras, delaminación, daños por granizo',
                                 },
                             ],
                         },
@@ -96,7 +96,7 @@ const Service = () => {
                                 className="size-14"
                                 alt=""
                             />
-                            <Paragraph className="text-white">Elimina riesgos de seguridad asociados a trabajos en altura.</Paragraph>
+                            <Paragraph className="text-white">Elimina riesgos de seguridad asociados a trabajos en altura</Paragraph>
                         </div>
 
                         {/* Beneficio 2 */}
@@ -106,7 +106,7 @@ const Service = () => {
                                 className="size-14"
                                 alt=""
                             />
-                            <Paragraph className="text-white">Anticipa fallas costosas con la detección temprana de defectos progresivos.</Paragraph>
+                            <Paragraph className="text-white">Anticipa fallas costosas con la detección temprana de defectos progresivos</Paragraph>
                         </div>
 
                         {/* Beneficio 3 */}
@@ -116,9 +116,7 @@ const Service = () => {
                                 className="size-14"
                                 alt=""
                             />
-                            <Paragraph className="text-white">
-                                Extiende la vida útil del activo con un programa basado en su condición real.
-                            </Paragraph>
+                            <Paragraph className="text-white">Extiende la vida útil del activo con un programa basado en su condición real</Paragraph>
                         </div>
 
                         {/* Beneficio 4 */}
@@ -129,7 +127,7 @@ const Service = () => {
                                 alt=""
                             />
 
-                            <Paragraph className="text-white">Optimiza el OPEX, interviniendo solo donde y cuando es necesario.</Paragraph>
+                            <Paragraph className="text-white">Optimiza el OPEX, interviniendo solo donde y cuando es necesario</Paragraph>
                         </div>
                     </div>
 
@@ -152,19 +150,19 @@ const Service = () => {
                         {
                             title: 'Monitoreo y control de construcción (EPC)',
                             description:
-                                'Realizamos vuelos periódicos para generar ortomosaicos y modelos 3D actualizados, apoyando el control de avance, la verificación técnica y la documentación as-built.',
+                                'Realizamos vuelos periódicos para generar ortomosaicos y modelos 3D actualizados, apoyando el control de avance, la verificación técnica y la documentación as-built',
                             image: '/assets/services/monitoreo-y-control.png',
                         },
                         {
                             title: 'DIGITALIZACIÓN DE ACTIVOS Y GEMELOS VIRTUALES',
                             description:
-                                'Creamos la base digital de sus activos mediante nubes de puntos y modelos 3D fotorrealistas, facilitando la planificación, el análisis de riesgos y la gestión técnica.',
+                                'Creamos la base digital de sus activos mediante nubes de puntos y modelos 3D fotorrealistas, facilitando la planificación, el análisis de riesgos y la gestión técnica',
                             image: '/assets/services/digitalizacion-de-activos.png',
                         },
                         {
                             title: 'CONSULTORÍA E INGENIERÍA A MEDIDA',
                             description:
-                                'Aplicamos experiencia sectorial y dominio tecnológico para resolver desafíos específicos, desde análisis de data O&M hasta el diseño de programas de monitoreo adaptados a cada proyecto.',
+                                'Aplicamos experiencia sectorial y dominio tecnológico para resolver desafíos específicos, desde análisis de data O&M hasta el diseño de programas de monitoreo adaptados a cada proyecto',
                             image: '/assets/services/consultoria-e-ingenieria.png',
                         },
                     ].map((item, index) => (

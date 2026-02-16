@@ -33,12 +33,12 @@ El resultado final es una operación que pasa de ser reactiva a ser  <strong>pre
         <>
             <Banner
                 title={bannerTitle}
-                pretitle="Reduce riesgos, anticipa fallas y optimiza la gestión de O&M en activos renovables."
+                pretitle="Reduce riesgos, anticipa fallas y optimiza la gestión de O&M en activos renovables"
                 characteristics={[
-                    'Captura autónoma de datos.',
-                    'Análisis de datos empleando IA.',
-                    'Validación humana experta.',
-                    'Reportes con información accionable.',
+                    'Captura autónoma de datos',
+                    'Análisis de datos empleando IA',
+                    'Validación humana experta',
+                    'Reportes con información accionable',
                 ]}
                 backgroundVideo="/assets/methodology/video-hero-metodologia.mp4"
                 overlay={true}

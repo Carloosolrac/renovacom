@@ -67,9 +67,9 @@ const LayoutForm = ({ withCTA = true }: { withCTA?: boolean }) => {
                                     value={null}
                                     onChange={() => {}}
                                     options={[
-                                        { value: 'solar', label: 'Inspección Solar' },
-                                        { value: 'eolica', label: 'Inspección Eólica' },
-                                        { value: 'ambos', label: 'Ambos servicios' },
+                                        { value: 'Inspección Solar', label: 'Inspección Solar' },
+                                        { value: 'Inspección Eólica', label: 'Inspección Eólica' },
+                                        { value: 'Otros servicios', label: 'Otros servicios' },
                                     ]}
                                 />
                             </div>

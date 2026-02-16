@@ -109,7 +109,7 @@ const Footer = () => {
                             role="listitem"
                             className="mb-4 text-lg text-white hover:text-green-renovacom"
                         >
-                            <Link href={'tel:+56912345678'}>+569 1234 5678</Link>
+                            <Link href={'tel:+56994712167'}>+56 9 9471 21 67</Link>
                         </li>
                         <li
                             role="listitem"

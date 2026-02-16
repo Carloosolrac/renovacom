@@ -5,7 +5,7 @@ import useNavigation from '@/hooks/useNavigation';
 import { cn } from '@/lib/utils';
 import { home } from '@/routes';
 import { getWidthClasses } from '@/utils/utils';
-import { InstagramIcon, LinkedInIcon } from '../icons/logos';
+import { LinkedInIcon } from '../icons/logos';
 import PrimaryLink from '../ui/primary-link';
 
 const Header = () => {
@@ -64,9 +64,9 @@ const Header = () => {
                             </li>
                         ))}
                         <li className="flex items-center gap-4">
-                            <Link aria-label="Enlace Instagram">
+                            {/* <Link aria-label="Enlace Instagram">
                                 <InstagramIcon className="size-5 text-white transition-all hover:text-green-renovacom!" />
-                            </Link>
+                            </Link> */}
                             <Link aria-label="Enlace LinkedIn">
                                 <LinkedInIcon className="size-5 text-white transition-all hover:text-green-renovacom!" />
                             </Link>
@@ -137,9 +137,9 @@ const Header = () => {
                         </PrimaryLink>
                     </div>
                     <div className="flex gap-6 pt-6">
-                        <Link>
+                        {/* <Link>
                             <InstagramIcon className="size-7 text-white" />
-                        </Link>
+                        </Link> */}
                         <Link>
                             <LinkedInIcon className="size-6 text-white" />
                         </Link>
