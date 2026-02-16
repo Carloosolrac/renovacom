@@ -146,6 +146,7 @@ const HomeSectionProblem = () => {
                 className={cn(
                     'absolute left-1/2 h-95 w-95 -translate-x-1/2 rounded-renovacom-xl bg-gray-renovacom md:h-120 md:w-130 lg:h-[75lvh] lg:max-h-210 lg:min-h-150 lg:min-w-275',
                     getAnimationClass('card-bottom-bottom'),
+                    animationState === 'idle' && 'translate-y-[120%]',
                 )}
             ></div>
         </section>
