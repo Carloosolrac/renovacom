@@ -3,7 +3,6 @@ import Banner from '@/components/ui/banner';
 import CardSlide from '@/components/ui/card-slide';
 import CardSlideContainer from '@/components/ui/card-slide-container';
 import Paragraph from '@/components/ui/paragraph';
-import PrimaryBlackLink from '@/components/ui/primary-black-link';
 import SecondaryLink from '@/components/ui/secondary-link';
 import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
@@ -25,8 +24,9 @@ const Service = () => {
                 ]}
                 overlay={true}
             />
-            <section className={cn(getWidthClasses(), 'space-y-14')}>
-                <Title>Servicios principales</Title>
+
+            <section>
+                <Title className={cn(getWidthClasses(), 'text-center')}>Servicios principales</Title>
                 <ArticlesSelector
                     items={[
                         {
@@ -52,6 +52,18 @@ const Service = () => {
                                     title: 'Recomendaciones de Acción',
                                     description: 'Plan de intervención focalizado que prioriza tareas de mantenimiento y recursos',
                                 },
+                            ],
+                            benefits: [
+                                { icon: '/assets/icons/shield.png', label: 'Elimina riesgos de seguridad asociados a trabajos en altura' },
+                                {
+                                    icon: '/assets/icons/target.png',
+                                    label: 'Anticipa fallas costosas con la detección temprana de defectos progresivos',
+                                },
+                                {
+                                    icon: '/assets/icons/round-about.png',
+                                    label: 'Extiende la vida útil del activo con un programa basado en su condición real',
+                                },
+                                { icon: '/assets/icons/graph.png', label: 'Optimiza el OPEX, interviniendo solo donde y cuando es necesario' },
                             ],
                         },
                         {
@@ -79,69 +91,25 @@ const Service = () => {
                                     description: 'Microfisuras, delaminación, daños por granizo',
                                 },
                             ],
+                            benefits: [
+                                { icon: '/assets/icons/eye-cancel.png', label: 'Identifica pérdidas invisibles al ojo humano que impactan su P&L' },
+                                {
+                                    icon: '/assets/icons/calendar-time.png',
+                                    label: 'Optimiza el programa de limpieza, dirigiendo esfuerzos a los sectores con mayor retorno',
+                                },
+                                {
+                                    icon: '/assets/icons/check-list.png',
+                                    label: 'Audita contratistas de O&M con datos objetivos sobre la efectividad de las limpiezas',
+                                },
+                                {
+                                    icon: '/assets/icons/fire.png',
+                                    label: 'Previene incendios y degradación acelerada con la detección temprana de puntos calientes críticos',
+                                },
+                            ],
                         },
                     ]}
                 />
             </section>
-
-            <section className="w-full bg-black-renovacom py-20">
-                <div className={cn(getWidthClasses(), 'space-y-12')}>
-                    <h3 className="font-space-grotesk text-4xl font-medium text-white uppercase">Beneficios clave</h3>
-
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                        {/* Beneficio 1 */}
-                        <div className="flex gap-6">
-                            <img
-                                src="/assets/icons/shield.png"
-                                className="size-14"
-                                alt=""
-                            />
-                            <Paragraph className="text-white">Elimina riesgos de seguridad asociados a trabajos en altura</Paragraph>
-                        </div>
-
-                        {/* Beneficio 2 */}
-                        <div className="flex gap-6">
-                            <img
-                                src="/assets/icons/target.png"
-                                className="size-14"
-                                alt=""
-                            />
-                            <Paragraph className="text-white">Anticipa fallas costosas con la detección temprana de defectos progresivos</Paragraph>
-                        </div>
-
-                        {/* Beneficio 3 */}
-                        <div className="flex gap-6">
-                            <img
-                                src="/assets/icons/round-about.png"
-                                className="size-14"
-                                alt=""
-                            />
-                            <Paragraph className="text-white">Extiende la vida útil del activo con un programa basado en su condición real</Paragraph>
-                        </div>
-
-                        {/* Beneficio 4 */}
-                        <div className="flex gap-6">
-                            <img
-                                src="/assets/icons/graph.png"
-                                className="size-14"
-                                alt=""
-                            />
-
-                            <Paragraph className="text-white">Optimiza el OPEX, interviniendo solo donde y cuando es necesario</Paragraph>
-                        </div>
-                    </div>
-
-                    <div className="flex justify-end">
-                        <PrimaryBlackLink
-                            href={'#contacto'}
-                            aria-label="Hablar sobre tu proyecto"
-                        >
-                            Habla con un Especialista
-                        </PrimaryBlackLink>
-                    </div>
-                </div>
-            </section>
-
             {/* Servicios principales */}
             <section className={cn(getWidthClasses(), 'space-y-14')}>
                 <Title>Servicios complementarios</Title>
