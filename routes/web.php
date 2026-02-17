@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MethodologyController;
 use App\Http\Controllers\ServicesController;
@@ -9,3 +10,5 @@ use Inertia\Inertia;
 Route::get('/', HomeController::class)->name('home');
 Route::get('/metodologia', MethodologyController::class)->name('metodologia');
 Route::get('/servicios', ServicesController::class)->name('servicios');
+
+Route::post('/contacto', ContactController::class)->middleware('throttle:10,1')->name('contact');

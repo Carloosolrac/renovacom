@@ -35,4 +35,7 @@ return [
         ],
     ],
 
+    'growthzilla' => [
+        'endpoint' => env('GROWTHZILLA_ENDPOINT'),
+    ]
 ];
