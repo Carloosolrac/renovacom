@@ -109,20 +109,20 @@ const Footer = () => {
                             role="listitem"
                             className="mb-4 text-lg text-white hover:text-green-renovacom"
                         >
-                            <Link href={'tel:+56994712167'}>+56 9 9471 21 67</Link>
+                            <a href={'tel:+56994712167'}>+56 9 9471 21 67</a>
                         </li>
                         <li
                             role="listitem"
                             className="mb-4 text-lg text-white hover:text-green-renovacom"
                         >
-                            <Link
+                            <a
                                 href="https://www.linkedin.com/company/renovacom/"
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 aria-label="Enlace LinkedIn"
                             >
                                 LinkedIn
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>

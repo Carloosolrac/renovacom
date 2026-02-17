@@ -64,17 +64,17 @@ const Header = () => {
                             </li>
                         ))}
                         <li className="flex items-center gap-4">
-                            {/* <Link aria-label="Enlace Instagram">
+                            {/* <a aria-label="Enlace Instagram">
                                 <InstagramIcon className="size-5 text-white transition-all hover:text-green-renovacom!" />
-                            </Link> */}
-                            <Link
+                            </a> */}
+                            <a
                                 href="https://www.linkedin.com/company/renovacom/"
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 aria-label="Enlace LinkedIn"
                             >
                                 <LinkedInIcon className="size-5 text-white transition-all hover:text-green-renovacom!" />
-                            </Link>
+                            </a>
                         </li>
                         <li>
                             <PrimaryLink
@@ -142,17 +142,17 @@ const Header = () => {
                         </PrimaryLink>
                     </div>
                     <div className="flex gap-6 pt-6">
-                        {/* <Link>
+                        {/* <a>
                             <InstagramIcon className="size-7 text-white" />
-                        </Link> */}
-                        <Link
+                        </a> */}
+                        <a
                             href="https://www.linkedin.com/company/renovacom/"
                             rel="noopener noreferrer"
                             target="_blank"
                             aria-label="Enlace LinkedIn"
                         >
                             <LinkedInIcon className="size-6 text-white" />
-                        </Link>
+                        </a>
                     </div>
                 </nav>
             </div>
