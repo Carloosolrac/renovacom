@@ -116,8 +116,10 @@ const Footer = () => {
                             className="mb-4 text-lg text-white hover:text-green-renovacom"
                         >
                             <Link
-                                href={'https://www.linkedin.com/company/renovacom/'}
+                                href="https://www.linkedin.com/company/renovacom/"
+                                rel="noopener noreferrer"
                                 target="_blank"
+                                aria-label="Enlace LinkedIn"
                             >
                                 LinkedIn
                             </Link>

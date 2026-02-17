@@ -67,7 +67,12 @@ const Header = () => {
                             {/* <Link aria-label="Enlace Instagram">
                                 <InstagramIcon className="size-5 text-white transition-all hover:text-green-renovacom!" />
                             </Link> */}
-                            <Link aria-label="Enlace LinkedIn">
+                            <Link
+                                href="https://www.linkedin.com/company/renovacom/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                aria-label="Enlace LinkedIn"
+                            >
                                 <LinkedInIcon className="size-5 text-white transition-all hover:text-green-renovacom!" />
                             </Link>
                         </li>
@@ -140,7 +145,12 @@ const Header = () => {
                         {/* <Link>
                             <InstagramIcon className="size-7 text-white" />
                         </Link> */}
-                        <Link>
+                        <Link
+                            href="https://www.linkedin.com/company/renovacom/"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            aria-label="Enlace LinkedIn"
+                        >
                             <LinkedInIcon className="size-6 text-white" />
                         </Link>
                     </div>
