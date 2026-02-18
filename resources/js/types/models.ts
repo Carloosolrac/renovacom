@@ -19,8 +19,8 @@ export interface BannerModel {
     title: string;
     pretitle: string | null;
     background_video: string;
-    button_link: string;
-    button_text: string;
+    button_link?: string;
+    button_text?: string;
     has_overlay: boolean;
     has_animation: boolean;
     created_at: string;

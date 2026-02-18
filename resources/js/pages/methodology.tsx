@@ -6,9 +6,14 @@ import PrimaryBlackLink from '@/components/ui/primary-black-link';
 import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
+import type { BannerModel } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
 
-const Methodology = () => {
+interface MethodologyProps {
+    banner: BannerModel;
+}
+
+const Methodology = ({ banner }: MethodologyProps) => {
     const bannerTitle = `Metodología orientada a la toma de <span className='text-green-renovacom'> decisiones operativas </span>`;
 
     const articleRight = `<ul>
@@ -32,16 +37,14 @@ El resultado final es una operación que pasa de ser reactiva a ser  <strong>pre
     return (
         <>
             <Banner
-                title={bannerTitle}
-                pretitle="Reduce riesgos, anticipa fallas y optimiza la gestión de O&M en activos renovables"
-                characteristics={[
-                    'Captura autónoma de datos',
-                    'Análisis de datos empleando IA',
-                    'Validación humana experta',
-                    'Reportes con información accionable',
-                ]}
-                backgroundVideo="/assets/methodology/video-hero-metodologia.mp4"
-                overlay={true}
+                title={banner.title}
+                buttonText={banner.button_text}
+                buttonLink={banner.button_link}
+                backgroundVideo={banner.background_video}
+                overlay={banner.has_overlay}
+                pretitle={banner.pretitle || undefined}
+                innerAnimationText={banner.has_animation}
+                characteristics={banner.characteristics}
             />
 
             <section className={cn(getWidthClasses(), 'space-y-14')}>

@@ -62,7 +62,7 @@ class BannerResource extends Resource
                                     ->toolbarButtons(['textColor'])
                                     ->textColors([
                                         '#deff22' => 'Verde',
-                                    ]) 
+                                    ])
                                     ->placeholder('Texto principal del banner'),
                                 TextInput::make('pretitle')
                                     ->label('Pretítulo')
@@ -96,12 +96,10 @@ class BannerResource extends Resource
                                             ->schema([
                                                 TextInput::make('button_text')
                                                     ->label('Texto del botón')
-                                                    ->placeholder('Ej: Hablemos')
-                                                    ->required(),
+                                                    ->placeholder('Ej: Hablemos'),
                                                 TextInput::make('button_link')
                                                     ->label('Enlace del botón')
-                                                    ->placeholder('Ej: #contacto')
-                                                    ->required(),
+                                                    ->placeholder('Ej: #contacto'),
                                             ]),
                                     ]),
                                 Section::make('Opciones visuales')

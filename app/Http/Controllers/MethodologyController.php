@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use Illuminate\Http\Request;
 
 class MethodologyController extends Controller
@@ -9,6 +10,9 @@ class MethodologyController extends Controller
     //
     public function __invoke()
     {
-        return inertia('methodology');
+        $page = Page::where('title', 'Metodología')->first();
+        return inertia('methodology', [
+            'banner' => $page->banner
+        ]);
     }
 }
