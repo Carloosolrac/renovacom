@@ -7,11 +7,10 @@ export interface CardSlideProps {
     title: string;
     description: string;
     image: string;
-    hasWhiteTitle?: boolean;
     totalParentItems?: number;
 }
 
-const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalParentItems }: CardSlideProps) => {
+const CardSlide = ({ title, description, image, totalParentItems }: CardSlideProps) => {
     const [isActive, setIsActive] = useState(false);
     const MAX_HEIGHT = 600;
     const HEIGHT_PER_ITEM = useMemo(() => MAX_HEIGHT / (totalParentItems ? totalParentItems / 2 : 1), [totalParentItems]);
@@ -96,9 +95,7 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
                             getTranslateClass(),
                         )}
                     >
-                        <h2
-                            className={`max-w-5/6 font-space-grotesk uppercase ${computedSize.title} font-medium ${hasWhiteTitle ? 'text-white' : 'text-green-renovacom'}`}
-                        >
+                        <h2 className={`max-w-5/6 font-space-grotesk uppercase ${computedSize.title} font-medium text-white`}>
                             <div dangerouslySetInnerHTML={{ __html: title }}></div>
                         </h2>
                     </div>

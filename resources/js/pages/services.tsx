@@ -7,22 +7,23 @@ import SecondaryLink from '@/components/ui/secondary-link';
 import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
+import type { BannerModel, CardSlideModel } from '@/types/models';
 import { getWidthClasses } from '@/utils/utils';
 
-const Service = () => {
+interface ServiceProps {
+    banner: BannerModel;
+    cardSlides: CardSlideModel[];
+}
+
+const Service = ({ banner, cardSlides }: ServiceProps) => {
     return (
         <>
             <Banner
-                backgroundVideo="/assets/services/video-hero-servicios.mp4"
-                pretitle="Servicios de inspección y consultoría para la gestión de activos renovables."
-                title="Inspecciones inteligentes para una <span className='text-green-renovacom'> operación optimizada</span>"
-                characteristics={[
-                    'Inspecciones 100% automatizadas',
-                    'Análisis de datos empleando IA',
-                    'Entrega en 48 horas',
-                    'Datos listos para tu gestión de activos',
-                ]}
-                overlay={true}
+                backgroundVideo={banner.background_video}
+                pretitle={banner.pretitle || undefined}
+                title={banner.title || "Inspecciones inteligentes para una <span className='text-green-renovacom'> operación optimizada</span>"}
+                characteristics={banner.characteristics}
+                overlay={banner.has_overlay}
             />
 
             <section>
@@ -114,30 +115,12 @@ const Service = () => {
             <section className={cn(getWidthClasses(), 'space-y-14')}>
                 <Title>Servicios complementarios</Title>
                 <CardSlideContainer>
-                    {[
-                        {
-                            title: 'Monitoreo y control de construcción (EPC)',
-                            description:
-                                'Realizamos vuelos periódicos para generar ortomosaicos y modelos 3D actualizados, apoyando el control de avance, la verificación técnica y la documentación as-built',
-                            image: '/assets/services/monitoreo-y-control.png',
-                        },
-                        {
-                            title: 'DIGITALIZACIÓN DE ACTIVOS Y GEMELOS VIRTUALES',
-                            description:
-                                'Creamos la base digital de sus activos mediante nubes de puntos y modelos 3D fotorrealistas, facilitando la planificación, el análisis de riesgos y la gestión técnica',
-                            image: '/assets/services/digitalizacion-de-activos.png',
-                        },
-                        {
-                            title: 'CONSULTORÍA E INGENIERÍA A MEDIDA',
-                            description:
-                                'Aplicamos experiencia sectorial y dominio tecnológico para resolver desafíos específicos, desde análisis de data O&M hasta el diseño de programas de monitoreo adaptados a cada proyecto',
-                            image: '/assets/services/consultoria-e-ingenieria.png',
-                        },
-                    ].map((item, index) => (
+                    {cardSlides.map((slide) => (
                         <CardSlide
-                            hasWhiteTitle={true}
-                            key={index}
-                            {...item}
+                            key={slide.id}
+                            title={slide.title}
+                            description={slide.description}
+                            image={slide.image}
                         />
                     ))}
                 </CardSlideContainer>

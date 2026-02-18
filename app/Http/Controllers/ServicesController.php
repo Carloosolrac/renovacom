@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Page;
 
 class ServicesController extends Controller
 {
-    //
     public function __invoke()
     {
-        return inertia('services');
+        $page = Page::where('title', 'Servicios')->first();
+
+        return inertia('services', [
+            'banner' => $page->banner,
+            'cardSlides' => $page->cardSlides,
+        ]);
     }
 }
