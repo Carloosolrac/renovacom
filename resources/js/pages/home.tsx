@@ -17,16 +17,17 @@ import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
 import { metodologia, servicios } from '@/routes';
-import type { BannerModel, CardAccordeonModel, CardSlideModel } from '@/types';
+import type { BannerModel, CardAccordeonModel, CardSlideModel, OtherServiceModel } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
 
 interface HomeProps {
     banner: BannerModel;
     cardAccordeons: CardAccordeonModel[];
     cardSlides: CardSlideModel[];
+    otherServices: OtherServiceModel[];
 }
 
-const Home = ({ banner, cardAccordeons, cardSlides }: HomeProps) => {
+const Home = ({ banner, cardAccordeons, cardSlides, otherServices }: HomeProps) => {
     return (
         <>
             <Banner
@@ -148,14 +149,10 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </div>
 
                 <div role="list">
-                    {[
-                        'Seguimiento a la construcción',
-                        'DESARROLLO DE gemelos VIRTUALES PARA LA DIGITALIZACIÓN DE ACTIVOS',
-                        'SERVICIOS DE INGENIERÍA Y CONSULTORÍA A MEDIDA',
-                    ].map((item, index) => (
+                    {otherServices.map((service) => (
                         <div
                             role="listitem"
-                            key={index}
+                            key={service.id}
                             className="group hover:bg-black-renovacom"
                         >
                             <div
@@ -164,22 +161,22 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                                     'flex flex-col items-center justify-between gap-4 border-b-2 border-black-renovacom py-8 text-black-renovacom group-hover:text-white lg:flex-row lg:gap-0',
                                 )}
                             >
-                                <h3 className="my-4 font-space-grotesk text-3xl font-medium uppercase lg:max-w-4/6 lg:text-4xl">{item}</h3>
+                                <h3 className="my-4 font-space-grotesk text-3xl font-medium uppercase lg:max-w-4/6 lg:text-4xl">{service.title}</h3>
 
                                 <PrimaryWhiteLink
-                                    href="#contacto"
+                                    href={service.link ?? '#contacto'}
                                     role="button"
                                     className="ml-auto hidden group-hover:flex"
-                                    aria-label={`Conocer más sobre ${item}`}
+                                    aria-label={`Conocer más sobre ${service.title}`}
                                 >
                                     Conoce más
                                 </PrimaryWhiteLink>
 
                                 <SecondaryLink
-                                    href="#contacto"
+                                    href={service.link ?? '#contacto'}
                                     role="button"
                                     className="ml-auto group-hover:hidden lg:hidden"
-                                    aria-label={`Conocer más sobre ${item}`}
+                                    aria-label={`Conocer más sobre ${service.title}`}
                                 >
                                     Conoce más
                                 </SecondaryLink>

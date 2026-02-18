@@ -17,6 +17,7 @@ class HomeController extends Controller
             'banner' => $page->banner,
             'cardAccordeons' => $page->cardAccordeons,
             'cardSlides' => $page->cardSlides,
+            'otherServices' => $page->otherServices,
         ]);
     }
 }

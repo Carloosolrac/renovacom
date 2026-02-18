@@ -27,4 +27,9 @@ class Page extends Model
     {
         return $this->hasMany(CardSlide::class)->orderBy('order');
     }
+
+    public function otherServices(): HasMany
+    {
+        return $this->hasMany(OtherService::class)->orderBy('order');
+    }
 }

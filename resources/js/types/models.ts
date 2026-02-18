@@ -8,6 +8,7 @@ export interface PageModel {
     banner?: BannerModel;
     card_accordeons?: CardAccordeonModel[];
     card_slides?: CardSlideModel[];
+    other_services?: OtherServiceModel[];
 }
 
 export interface BannerModel {
@@ -71,6 +72,18 @@ export interface CardSlideModel {
     description: string;
     image: string;
     has_white_title: boolean;
+    order: number;
+    created_at: string;
+    updated_at: string;
+    // Relations
+    page?: PageModel;
+}
+
+export interface OtherServiceModel {
+    id: number;
+    page_id: number;
+    title: string;
+    link: string | null;
     order: number;
     created_at: string;
     updated_at: string;
