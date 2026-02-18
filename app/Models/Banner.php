@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Storage;
 
 class Banner extends Model
 {
@@ -25,6 +27,13 @@ class Banner extends Model
             'has_overlay' => 'boolean',
             'has_animation' => 'boolean',
         ];
+    }
+
+    protected function backgroundVideo(): Attribute
+    {
+        return Attribute::make(
+            get: fn (?string $value) => $value ? Storage::url($value) : null,
+        );
     }
 
     public function page(): BelongsTo
