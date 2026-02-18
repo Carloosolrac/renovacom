@@ -63,7 +63,7 @@ class CardAccordeonDownResource extends Resource
                         FileUpload::make('icon')
                             ->label('Ícono')
                             ->image()
-                            ->maxSize(400)
+                            ->maxSize(100)
                             ->directory('card-accordeon-down/icons')
                             ->required(),
 

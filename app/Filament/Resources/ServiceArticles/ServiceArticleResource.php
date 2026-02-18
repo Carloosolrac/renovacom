@@ -82,7 +82,7 @@ class ServiceArticleResource extends Resource
                                     ->label('Ícono')
                                     ->image()
                                     ->directory('service-articles/icons')
-                                    ->maxSize(400) // 400KB
+                                    ->maxSize(100) // 400KB
                                     ->required(),
                                 FileUpload::make('image')
                                     ->label('Imagen de fondo')
@@ -105,6 +105,7 @@ class ServiceArticleResource extends Resource
                                                 FileUpload::make('icon')
                                                     ->label('Ícono')
                                                     ->image()
+                                                    ->maxSize(100)
                                                     ->directory('service-articles/deliveries')
                                                     ->required(),
                                                 TextInput::make('title')
@@ -130,6 +131,7 @@ class ServiceArticleResource extends Resource
                                                 FileUpload::make('icon')
                                                     ->label('Ícono')
                                                     ->image()
+                                                    ->maxSize(100)
                                                     ->directory('service-articles/benefits')
                                                     ->required(),
                                                 TextInput::make('label')

@@ -72,7 +72,7 @@ class CardAccordeonResource extends Resource
                         FileUpload::make('icon')
                             ->label('Icono')
                             ->image()
-                            ->maxSize(400) // 400KB 
+                            ->maxSize(100) // 400KB 
                             ->directory('icons')
                             ->required(),
                     ])
