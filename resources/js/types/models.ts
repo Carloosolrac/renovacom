@@ -143,3 +143,45 @@ export interface CardAccordeonDownListModel {
     // Relations
     card_accordeon_down?: CardAccordeonDownModel;
 }
+
+export interface ServiceArticleModel {
+    id: number;
+    page_id: number;
+    title: string;
+    content: string;
+    precontent: string;
+    icon: string;
+    image: string;
+    order: number;
+    created_at: string;
+    updated_at: string;
+    // Relations
+    page?: PageModel;
+    deliveries: ServiceArticleDeliveryModel[];
+    benefits: ServiceArticleBenefitModel[];
+}
+
+export interface ServiceArticleDeliveryModel {
+    id: number;
+    service_article_id: number;
+    icon: string;
+    title: string;
+    description: string;
+    order: number;
+    created_at: string;
+    updated_at: string;
+    // Relations
+    service_article?: ServiceArticleModel;
+}
+
+export interface ServiceArticleBenefitModel {
+    id: number;
+    service_article_id: number;
+    icon: string;
+    label: string;
+    order: number;
+    created_at: string;
+    updated_at: string;
+    // Relations
+    service_article?: ServiceArticleModel;
+}

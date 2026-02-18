@@ -1,6 +1,7 @@
 import HTMLReactParser from 'html-react-parser/lib/index';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import type { ServiceArticleModel } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
 import CardSimple from './card-simple';
 import CardSimpleContainer from './card-simple-container';
@@ -8,22 +9,7 @@ import Paragraph from './paragraph';
 import PrimaryBlackLink from './primary-black-link';
 
 interface ArticlesSelectorProps {
-    items: Array<{
-        title: string;
-        content: string;
-        icon: string;
-        image: string;
-        precontent?: string;
-        deliveries?: Array<{
-            icon: string;
-            title: string;
-            description: string;
-        }>;
-        benefits?: Array<{
-            icon: string;
-            label: string;
-        }>;
-    }>;
+    items: ServiceArticleModel[];
 }
 
 const ArticlesSelector = ({ items }: ArticlesSelectorProps) => {
@@ -97,9 +83,9 @@ const ArticlesSelector = ({ items }: ArticlesSelectorProps) => {
 
                     <h3 className="font-space-grotesk text-4xl font-medium text-black-renovacom uppercase">Qué entregamos</h3>
                     <CardSimpleContainer>
-                        {items[selectedArticle].deliveries?.map((delivery, index) => (
+                        {items[selectedArticle].deliveries?.map((delivery) => (
                             <CardSimple
-                                key={index}
+                                key={delivery.id}
                                 icon={delivery.icon}
                                 title={delivery.title}
                                 description={delivery.description}
@@ -114,15 +100,18 @@ const ArticlesSelector = ({ items }: ArticlesSelectorProps) => {
                     <h3 className="font-space-grotesk text-4xl font-medium text-white uppercase">Beneficios clave</h3>
 
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                        {items[selectedArticle].benefits?.map((benefit, index) => (
+                        {items[selectedArticle].benefits?.map((benefit) => (
                             <div
-                                key={index}
+                                key={benefit.id}
                                 className="flex gap-6"
                             >
                                 <img
                                     src={benefit.icon}
                                     className="size-14"
-                                    alt=""
+                                    alt={benefit.label}
+                                    style={{
+                                        filter: 'brightness(0) saturate(100%) invert(100%) sepia(10%) saturate(7430%) hue-rotate(250deg) brightness(110%) contrast(117%)',
+                                    }}
                                 />
                                 <Paragraph className="text-white">{benefit.label}</Paragraph>
                             </div>

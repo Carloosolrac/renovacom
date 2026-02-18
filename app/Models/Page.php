@@ -47,4 +47,9 @@ class Page extends Model
     {
         return $this->hasMany(CardAccordeonDown::class)->with('items')->orderBy('order');
     }
+
+    public function serviceArticles(): HasMany
+    {
+        return $this->hasMany(ServiceArticle::class)->with(['deliveries', 'benefits'])->orderBy('order');
+    }
 }

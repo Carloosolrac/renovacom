@@ -12,7 +12,8 @@ class ServicesController extends Controller
 
         return inertia('services', [
             'banner' => $page->banner,
-            'cardSlides' => $page->cardSlides,
+            'cardSlides' => $page->cardSlides ?? [],
+            'serviceArticles' => $page->serviceArticles ?? [],
         ]);
     }
 }

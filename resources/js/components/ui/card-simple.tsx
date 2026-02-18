@@ -17,6 +17,9 @@ const CardSimple = ({ icon, title, description }: CardSimpleProps) => {
                 className="max-w-14"
                 src={icon}
                 alt={title}
+                style={{
+                    filter: 'brightness(0) saturate(100%) invert(21%) sepia(38%) saturate(1124%) hue-rotate(150deg) brightness(90%) contrast(92%)',
+                }}
             />
             <h3 className="font-space-grotesk text-2xl font-medium text-black-renovacom">{title}</h3>
 
