@@ -10,6 +10,7 @@ export interface PageModel {
     card_slides?: CardSlideModel[];
     other_services?: OtherServiceModel[];
     card_statistics?: CardStatisticModel[];
+    partner_logos?: PartnerLogoModel[];
 }
 
 export interface BannerModel {
@@ -98,6 +99,18 @@ export interface CardStatisticModel {
     icon: string;
     title: string;
     description: string;
+    order: number;
+    created_at: string;
+    updated_at: string;
+    // Relations
+    page?: PageModel;
+}
+
+export interface PartnerLogoModel {
+    id: number;
+    page_id: number;
+    image: string;
+    alt: string;
     order: number;
     created_at: string;
     updated_at: string;

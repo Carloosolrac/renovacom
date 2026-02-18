@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Page;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -19,6 +18,7 @@ class HomeController extends Controller
             'cardSlides' => $page->cardSlides,
             'otherServices' => $page->otherServices,
             'cardStatistics' => $page->cardStatistics,
+            'partnerLogos' => $page->partnerLogos,
         ]);
     }
 }

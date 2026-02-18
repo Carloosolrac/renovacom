@@ -9,6 +9,7 @@ import CardSlide from '@/components/ui/card-slide';
 import CardSlideContainer from '@/components/ui/card-slide-container';
 import CardStatistics from '@/components/ui/card-statistics';
 import CardStatisticsContainer from '@/components/ui/card-statistics-container';
+import InfiniteSlider from '@/components/ui/infinite-slider';
 import Paragraph from '@/components/ui/paragraph';
 import PrimaryBlackLink from '@/components/ui/primary-black-link';
 import PrimaryWhiteLink from '@/components/ui/primary-white-link';
@@ -17,7 +18,7 @@ import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
 import { metodologia, servicios } from '@/routes';
-import type { BannerModel, CardAccordeonModel, CardSlideModel, CardStatisticModel, OtherServiceModel } from '@/types';
+import type { BannerModel, CardAccordeonModel, CardSlideModel, CardStatisticModel, OtherServiceModel, PartnerLogoModel } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
 
 interface HomeProps {
@@ -26,9 +27,10 @@ interface HomeProps {
     cardSlides: CardSlideModel[];
     otherServices: OtherServiceModel[];
     cardStatistics: CardStatisticModel[];
+    partnerLogos: PartnerLogoModel[];
 }
 
-const Home = ({ banner, cardAccordeons, cardSlides, otherServices, cardStatistics }: HomeProps) => {
+const Home = ({ banner, cardAccordeons, cardSlides, otherServices, cardStatistics, partnerLogos }: HomeProps) => {
     return (
         <>
             <Banner
@@ -195,24 +197,11 @@ const Home = ({ banner, cardAccordeons, cardSlides, otherServices, cardStatistic
                 </CardStatisticsContainer>
             </section>
 
-            {/* <section className={cn(getWidthClasses())}>
-                <InfiniteSlider
-                    items={[
-                        {
-                            src: '/assets/logos/bbc.png',
-                            alt: 'BBC Logo',
-                        },
-                        {
-                            src: '/assets/logos/deloitte.png',
-                            alt: 'Deloitte Logo',
-                        },
-                        {
-                            src: '/assets/logos/unilever.png',
-                            alt: 'Unilever Logo',
-                        },
-                    ]}
-                />
-            </section> */}
+            {partnerLogos.length > 0 && (
+                <section className={cn(getWidthClasses())}>
+                    <InfiniteSlider items={partnerLogos} />
+                </section>
+            )}
         </>
     );
 };

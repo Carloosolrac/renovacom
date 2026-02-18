@@ -37,4 +37,9 @@ class Page extends Model
     {
         return $this->hasMany(CardStatistic::class)->orderBy('order');
     }
+
+    public function partnerLogos(): HasMany
+    {
+        return $this->hasMany(PartnerLogo::class)->orderBy('order');
+    }
 }
