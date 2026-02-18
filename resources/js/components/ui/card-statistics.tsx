@@ -20,6 +20,9 @@ const CardStatistics = ({ title, description, icon, className, delay }: CardStat
                 src={icon}
                 alt={title}
                 className="size-20 max-h-20"
+                style={{
+                    filter: 'brightness(0) saturate(100%) invert(84%) sepia(88%) saturate(461%) hue-rotate(11deg) brightness(105%) contrast(98%)',
+                }}
             />
             <h3 className="font-space-grotesk text-4xl font-semibold text-white uppercase xl:text-6xl">{title}</h3>
             <p className="text-xl text-white">{description}</p>

@@ -32,4 +32,9 @@ class Page extends Model
     {
         return $this->hasMany(OtherService::class)->orderBy('order');
     }
+
+    public function cardStatistics(): HasMany
+    {
+        return $this->hasMany(CardStatistic::class)->orderBy('order');
+    }
 }

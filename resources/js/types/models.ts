@@ -9,6 +9,7 @@ export interface PageModel {
     card_accordeons?: CardAccordeonModel[];
     card_slides?: CardSlideModel[];
     other_services?: OtherServiceModel[];
+    card_statistics?: CardStatisticModel[];
 }
 
 export interface BannerModel {
@@ -84,6 +85,19 @@ export interface OtherServiceModel {
     page_id: number;
     title: string;
     link: string | null;
+    order: number;
+    created_at: string;
+    updated_at: string;
+    // Relations
+    page?: PageModel;
+}
+
+export interface CardStatisticModel {
+    id: number;
+    page_id: number;
+    icon: string;
+    title: string;
+    description: string;
     order: number;
     created_at: string;
     updated_at: string;

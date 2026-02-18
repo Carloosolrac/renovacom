@@ -17,7 +17,7 @@ import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
 import { metodologia, servicios } from '@/routes';
-import type { BannerModel, CardAccordeonModel, CardSlideModel, OtherServiceModel } from '@/types';
+import type { BannerModel, CardAccordeonModel, CardSlideModel, CardStatisticModel, OtherServiceModel } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
 
 interface HomeProps {
@@ -25,9 +25,10 @@ interface HomeProps {
     cardAccordeons: CardAccordeonModel[];
     cardSlides: CardSlideModel[];
     otherServices: OtherServiceModel[];
+    cardStatistics: CardStatisticModel[];
 }
 
-const Home = ({ banner, cardAccordeons, cardSlides, otherServices }: HomeProps) => {
+const Home = ({ banner, cardAccordeons, cardSlides, otherServices, cardStatistics }: HomeProps) => {
     return (
         <>
             <Banner
@@ -71,37 +72,6 @@ const Home = ({ banner, cardAccordeons, cardSlides, otherServices }: HomeProps) 
                             description={card.description}
                         />
                     ))}
-                    {/* 
-                    <CardAccordeon
-                        background="/assets/captura-de-datos.png"
-                        icon={'/assets/icons/drone.png'}
-                        title={'Captura autónoma de datos'}
-                        description={
-                            'Datos precisos desde el terreno, sin riesgos operativos. <br/> <br/> Realizamos vuelos autónomos y repetibles que aseguran cobertura total del activo y datos consistentes, sin trabajos en altura ni detenciones de planta.'
-                        }
-                    />
-                    <CardAccordeon
-                        background="/assets/analisis-con-ia.png"
-                        title={'Análisis de Datos con IA'}
-                        description="Detectamos lo crítico y priorizamos lo relevante. <br/> <br/>
-                        Procesamos grandes volúmenes de información mediante inteligencia artificial para identificar y clasificar fallas según tipo y severidad."
-                        icon={'/assets/icons/ai.png'}
-                    />
-                    <CardAccordeon
-                        background="/assets/validacion-tecnica.png"
-                        title="Validación Humana"
-                        description="Tecnología respaldada por criterio profesional.
- <br/> <br/>
-Nuestros ingenieros revisan y validan los hallazgos, asegurando diagnósticos confiables y recomendaciones con sustento técnico real."
-                        icon="/assets/icons/eye.png"
-                    />
-                    <CardAccordeon
-                        background="/assets/resultados-accionables.png"
-                        title="Resultados Accionables e Integrables"
-                        description="Información lista para decidir y actuar. <br/> <br/>
-Entregamos reportes claros y datos estructurados, compatibles con sus plataformas de gestión, para optimizar la planificación de O&M."
-                        icon="/assets/icons/dashboard.png"
-                    /> */}
                 </CardAccordeonContainer>
 
                 <div className="flex flex-col items-center justify-end gap-5 py-10 md:flex-row">
@@ -214,26 +184,12 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
             </section>
             <section className="bg-black-renovacom">
                 <CardStatisticsContainer className={getWidthClasses()}>
-                    {[
-                        {
-                            icon: '/assets/icons/statistic-light.png',
-                            title: '+70 MWP',
-                            description: 'Capacidad inspeccionada por día en plantas solares.',
-                        },
-                        {
-                            icon: '/assets/icons/statistic-up.png',
-                            title: '48h',
-                            description: 'Tiempo de entrega de reportes.',
-                        },
-                        {
-                            icon: '/assets/icons/statistic-time.png',
-                            title: '35 min',
-                            description: 'Tiempo de inspección por aerogenerador.',
-                        },
-                    ].map((item, index) => (
+                    {cardStatistics.map((stat) => (
                         <CardStatistics
-                            key={index}
-                            {...item}
+                            key={stat.id}
+                            icon={stat.icon}
+                            title={stat.title}
+                            description={stat.description}
                         />
                     ))}
                 </CardStatisticsContainer>
