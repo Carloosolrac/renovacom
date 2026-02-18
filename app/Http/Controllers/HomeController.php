@@ -15,7 +15,8 @@ class HomeController extends Controller
 
         return inertia('home', [
             'banner' => $page->banner,
-            'cardAccordeons' => $page->cardAccordeons
+            'cardAccordeons' => $page->cardAccordeons,
+            'cardSlides' => $page->cardSlides,
         ]);
     }
 }

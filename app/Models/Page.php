@@ -22,4 +22,9 @@ class Page extends Model
     {
         return $this->hasMany(CardAccordeon::class)->orderBy('order');
     }
+
+    public function cardSlides(): HasMany
+    {
+        return $this->hasMany(CardSlide::class)->orderBy('order');
+    }
 }

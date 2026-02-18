@@ -7,6 +7,7 @@ export interface PageModel {
     // Relations
     banner?: BannerModel;
     card_accordeons?: CardAccordeonModel[];
+    card_slides?: CardSlideModel[];
 }
 
 export interface BannerModel {
@@ -60,4 +61,19 @@ export interface ContactModel {
     message: string;
     created_at: string;
     updated_at: string;
+}
+
+export interface CardSlideModel {
+    id: number;
+    page_id: number;
+    section_key: string | null;
+    title: string;
+    description: string;
+    image: string;
+    has_white_title: boolean;
+    order: number;
+    created_at: string;
+    updated_at: string;
+    // Relations
+    page?: PageModel;
 }

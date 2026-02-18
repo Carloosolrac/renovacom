@@ -17,15 +17,16 @@ import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
 import { metodologia, servicios } from '@/routes';
-import type { BannerModel, CardAccordeonModel } from '@/types';
+import type { BannerModel, CardAccordeonModel, CardSlideModel } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
 
 interface HomeProps {
     banner: BannerModel;
     cardAccordeons: CardAccordeonModel[];
+    cardSlides: CardSlideModel[];
 }
 
-const Home = ({ banner, cardAccordeons }: HomeProps) => {
+const Home = ({ banner, cardAccordeons, cardSlides }: HomeProps) => {
     return (
         <>
             <Banner
@@ -130,16 +131,14 @@ Entregamos reportes claros y datos estructurados, compatibles con sus plataforma
                 </Paragraph>
 
                 <CardSlideContainer>
-                    <CardSlide
-                        title="INSPECCIÓN EÓLICa"
-                        description="Identificamos el estado físico de las aspas y la torre del aerogenerador de manera rápida, segura y confiable para la programación eficiente de las tareas de mantenimiento."
-                        image="/assets/home/background-inspeccion-eolica.png"
-                    />
-                    <CardSlide
-                        title="INSPECCIÓN SOLAR"
-                        description="Detectamos fallas a nivel de celda mediante termografía y combinamos medición de suciedad en un solo vuelo para estimar pérdidas y optimizar mantenimiento."
-                        image="/assets/home/background-card-slider-1.png"
-                    />
+                    {cardSlides.map((card) => (
+                        <CardSlide
+                            key={card.id}
+                            title={card.title}
+                            description={card.description}
+                            image={card.image}
+                        />
+                    ))}
                 </CardSlideContainer>
             </section>
 

@@ -99,7 +99,7 @@ const CardSlide = ({ title, description, image, hasWhiteTitle = false, totalPare
                         <h2
                             className={`max-w-5/6 font-space-grotesk uppercase ${computedSize.title} font-medium ${hasWhiteTitle ? 'text-white' : 'text-green-renovacom'}`}
                         >
-                            {title}
+                            <div dangerouslySetInnerHTML={{ __html: title }}></div>
                         </h2>
                     </div>
                     {/* C2 */}
