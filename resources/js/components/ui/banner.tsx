@@ -1,6 +1,7 @@
 import HTMLReactParser from 'html-react-parser/lib/index';
 import { useCallback } from 'react';
 import { cn } from '@/lib/utils';
+import type { BannerCharacteristicModel } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
 import { StarIcon } from '../icons/icons';
 import PrimaryLink from './primary-link';
@@ -10,7 +11,7 @@ interface BannerProps {
     title: string;
     buttonText?: string;
     buttonLink?: string;
-    characteristics?: string[];
+    characteristics?: BannerCharacteristicModel[];
     overlay?: boolean;
     backgroundVideo: string;
     innerAnimationText?: boolean;
@@ -106,11 +107,11 @@ const Banner = ({
                     >
                         {characteristics.map((item) => (
                             <li
-                                key={item}
+                                key={item.id}
                                 className="flex items-center gap-4 text-xl xl:text-2xl"
                             >
                                 <StarIcon className="size-6 xl:size-4" />
-                                {item}
+                                {item.text}
                             </li>
                         ))}
                     </ul>

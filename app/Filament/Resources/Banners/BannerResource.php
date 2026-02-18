@@ -10,7 +10,6 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Actions\ViewAction;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
@@ -19,14 +18,15 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
-use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class BannerResource extends Resource
 {
@@ -34,7 +34,9 @@ class BannerResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Banner';
+    protected static ?string $recordTitleAttribute = 'Banners';
+
+    protected static string|UnitEnum|null $navigationGroup = 'Recursos compartidos';
 
     public static function form(Schema $schema): Schema
     {
@@ -59,8 +61,8 @@ class BannerResource extends Resource
                                     ->required()
                                     ->toolbarButtons(['textColor'])
                                     ->textColors([
-                                        '#deff22' => 'Verde'
-                                    ])
+                                        '#deff22' => 'Verde',
+                                    ]) 
                                     ->placeholder('Texto principal del banner'),
                                 TextInput::make('pretitle')
                                     ->label('Pretítulo')
@@ -80,7 +82,7 @@ class BannerResource extends Resource
                                             ->required(),
                                     ])
                                     ->reorderable()
-                                    ->orderColumn('order')
+                                    ->orderColumn('order'),
 
                             ]),
                         Tab::make('Configuración')
@@ -94,10 +96,12 @@ class BannerResource extends Resource
                                             ->schema([
                                                 TextInput::make('button_text')
                                                     ->label('Texto del botón')
-                                                    ->placeholder('Ej: Hablemos'),
+                                                    ->placeholder('Ej: Hablemos')
+                                                    ->required(),
                                                 TextInput::make('button_link')
                                                     ->label('Enlace del botón')
-                                                    ->placeholder('Ej: #contacto'),
+                                                    ->placeholder('Ej: #contacto')
+                                                    ->required(),
                                             ]),
                                     ]),
                                 Section::make('Opciones visuales')

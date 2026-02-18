@@ -11,16 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('banners', function (Blueprint $table) {
+        Schema::create('card_accordeons', function (Blueprint $table) {
             $table->id();
             $table->foreignId('page_id')->constrained()->cascadeOnDelete();
-            $table->text('title');
-            $table->string('pretitle')->nullable();
-            $table->string('background_video');
-            $table->string('button_link');
-            $table->string('button_text');
-            $table->boolean('has_overlay')->default(false);
-            $table->boolean('has_animation')->default(false);
+            $table->string('background');
+            $table->string('icon');
+            $table->string('title');
+            $table->text('description');
+            $table->unsignedSmallInteger('order')->default(0);
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('banners');
+        Schema::dropIfExists('card_accordeons');
     }
 };

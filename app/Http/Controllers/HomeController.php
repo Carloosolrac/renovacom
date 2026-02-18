@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -9,6 +10,12 @@ class HomeController extends Controller
     //
     public function __invoke()
     {
-        return inertia('home');
+
+        $page = Page::where('title', 'Inicio')->first();
+
+        return inertia('home', [
+            'banner' => $page->banner,
+            'cardAccordeons' => $page->cardAccordeons
+        ]);
     }
 }

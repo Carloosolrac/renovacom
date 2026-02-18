@@ -86,3 +86,9 @@
 :root {
     scroll-behavior: smooth;
 }
+
+/* Filament RichEditor color support */
+.color,
+[data-color] {
+    color: var(--color);
+}

@@ -1,4 +1,5 @@
 export type * from './auth';
+export type * from './models';
 
 import type { Auth } from './auth';
 

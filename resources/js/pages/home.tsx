@@ -17,20 +17,24 @@ import Title from '@/components/ui/title';
 import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
 import { metodologia, servicios } from '@/routes';
+import type { BannerModel, CardAccordeonModel } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
 
-const Home = () => {
-    const txt = 'DE LA INGENIERÍA DE PROYECTOS A LA <span className="text-green-renovacom">INTELIGENCIA OPERATIVA</span>';
+interface HomeProps {
+    banner: BannerModel;
+    cardAccordeons: CardAccordeonModel[];
+}
 
+const Home = ({ banner, cardAccordeons }: HomeProps) => {
     return (
         <>
             <Banner
-                title={txt}
-                backgroundVideo="/assets/home/video-hero-home.mp4"
-                buttonLink="#contacto"
-                buttonText="Hablemos"
-                innerAnimationText={true}
-                characteristics={['Inteligencia operativa para activos renovables', 'Sistema de adquisición de datos autónoma']}
+                title={banner.title}
+                backgroundVideo={banner.background_video}
+                buttonLink={banner.button_link}
+                buttonText={banner.button_text}
+                innerAnimationText={banner.has_animation}
+                characteristics={banner.characteristics}
             />
             <section className={cn(getWidthClasses())}>
                 <ul
@@ -56,6 +60,16 @@ const Home = () => {
                 <Title>Un flujo de trabajo diseñado para convertir datos en decisiones operativas</Title>
 
                 <CardAccordeonContainer>
+                    {cardAccordeons.map((card) => (
+                        <CardAccordeon
+                            key={card.id}
+                            background={card.background}
+                            icon={card.icon}
+                            title={card.title}
+                            description={card.description}
+                        />
+                    ))}
+                    {/* 
                     <CardAccordeon
                         background="/assets/captura-de-datos.png"
                         icon={'/assets/icons/drone.png'}
@@ -85,7 +99,7 @@ Nuestros ingenieros revisan y validan los hallazgos, asegurando diagnósticos co
                         description="Información lista para decidir y actuar. <br/> <br/>
 Entregamos reportes claros y datos estructurados, compatibles con sus plataformas de gestión, para optimizar la planificación de O&M."
                         icon="/assets/icons/dashboard.png"
-                    />
+                    /> */}
                 </CardAccordeonContainer>
 
                 <div className="flex flex-col items-center justify-end gap-5 py-10 md:flex-row">
