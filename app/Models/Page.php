@@ -42,4 +42,9 @@ class Page extends Model
     {
         return $this->hasMany(PartnerLogo::class)->orderBy('order');
     }
+
+    public function cardAccordeonDowns(): HasMany
+    {
+        return $this->hasMany(CardAccordeonDown::class)->with('items')->orderBy('order');
+    }
 }

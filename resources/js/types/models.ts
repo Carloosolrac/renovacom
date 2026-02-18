@@ -117,3 +117,29 @@ export interface PartnerLogoModel {
     // Relations
     page?: PageModel;
 }
+
+export interface CardAccordeonDownModel {
+    id: number;
+    page_id: number;
+    title: string;
+    image: string;
+    icon: string;
+    order: number;
+    created_at: string;
+    updated_at: string;
+    // Relations
+    page?: PageModel;
+    items: CardAccordeonDownListModel[];
+}
+
+export interface CardAccordeonDownListModel {
+    id: number;
+    card_accordeon_down_id: number;
+    title: string;
+    description: string;
+    order: number;
+    created_at: string;
+    updated_at: string;
+    // Relations
+    card_accordeon_down?: CardAccordeonDownModel;
+}
