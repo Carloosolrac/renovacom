@@ -11,7 +11,7 @@ const ArticleDivision = ({ image, leftText, rightText }: ArticleDivisionProps) =
         <article
             className="relative max-h-200 w-full overflow-hidden rounded-3xl bg-cover bg-center lg:h-200"
             style={{
-                backgroundImage: `url(${image})`,
+                backgroundImage: `url(${image.startsWith('/') ? image : `/storage/${image}`})`,
             }}
         >
             <svg
