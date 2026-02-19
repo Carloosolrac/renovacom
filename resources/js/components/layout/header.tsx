@@ -1,6 +1,7 @@
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
-import { Link } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 import { useCallback, useState } from 'react';
+import { SharedData } from '@/types';
 import useNavigation from '@/hooks/useNavigation';
 import { cn } from '@/lib/utils';
 import { home } from '@/routes';
@@ -14,6 +15,8 @@ const Header = () => {
     const backgroundColorBasedUrl = useCallback(() => {
         return current !== home.get().url ? 'bg-transparent border-white border-2' : 'bg-gray-renovacom';
     }, [current]);
+
+    const { linkedin } = usePage<SharedData>().props.layout;
 
     const [toggleMenu, setToggleMenu] = useState(false);
     const handleToggleMenu = () => {
@@ -68,7 +71,7 @@ const Header = () => {
                                 <InstagramIcon className="size-5 text-white transition-all hover:text-green-renovacom!" />
                             </a> */}
                             <a
-                                href="https://www.linkedin.com/company/renovacom/"
+                                href={linkedin || 'https://www.linkedin.com/company/renovacom/'}
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 aria-label="Enlace LinkedIn"
@@ -146,7 +149,7 @@ const Header = () => {
                             <InstagramIcon className="size-7 text-white" />
                         </a> */}
                         <a
-                            href="https://www.linkedin.com/company/renovacom/"
+                            href={linkedin || 'https://www.linkedin.com/company/renovacom/'}
                             rel="noopener noreferrer"
                             target="_blank"
                             aria-label="Enlace LinkedIn"

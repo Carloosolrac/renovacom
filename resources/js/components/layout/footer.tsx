@@ -1,10 +1,13 @@
-import { Link } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 import useNavigation from '@/hooks/useNavigation';
 import { cn } from '@/lib/utils';
+import type { SharedData } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
 
 const Footer = () => {
     const { navigationItems } = useNavigation();
+
+    const { email, phone, linkedin } = usePage<SharedData>().props.layout;
 
     return (
         <footer className="relative overflow-hidden bg-black-renovacom py-20">
@@ -103,20 +106,20 @@ const Footer = () => {
                             role="listitem"
                             className="mb-4 text-lg text-white hover:text-green-renovacom"
                         >
-                            <Link href={'mailto:info@renovacom.cl'}>info@renovacom.cl</Link>
+                            <Link href={`mailto:${email || 'info@renovacom.cl'}`}>{email || 'info@renovacom.cl'}</Link>
                         </li>
                         <li
                             role="listitem"
                             className="mb-4 text-lg text-white hover:text-green-renovacom"
                         >
-                            <a href={'tel:+56994712167'}>+56 9 9471 21 67</a>
+                            <a href={`tel:${(phone || '+56994712167').replace(/\s/g, '')}`}>{phone || '+56 9 9471 21 67'}</a>
                         </li>
                         <li
                             role="listitem"
                             className="mb-4 text-lg text-white hover:text-green-renovacom"
                         >
                             <a
-                                href="https://www.linkedin.com/company/renovacom/"
+                                href={linkedin || 'https://www.linkedin.com/company/renovacom/'}
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 aria-label="Enlace LinkedIn"
