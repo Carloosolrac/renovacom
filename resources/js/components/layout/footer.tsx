@@ -16,7 +16,6 @@ const Footer = () => {
                     className="right-0 z-0 hidden w-full! lg:absolute lg:-top-5 lg:block lg:scale-[1.1] xl:left-0 xl:scale-[1] 2xl:scale-[1.1]"
                     width="100%"
                     height="371"
-                    viewBox="0 0 100% 371"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                 >
