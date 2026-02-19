@@ -151,7 +151,7 @@ const Home = ({ banner, cardAccordeons, cardSlides, otherServices, cardStatistic
                                     'flex flex-col items-center justify-between gap-4 border-b-2 border-black-renovacom py-8 text-black-renovacom group-hover:text-white lg:flex-row lg:gap-0',
                                 )}
                             >
-                                <h3 className="my-4 font-space-grotesk text-3xl font-medium uppercase lg:max-w-4/6 lg:text-4xl">{service.title}</h3>
+                                <h2 className="my-4 font-space-grotesk text-3xl font-medium uppercase lg:max-w-4/6 lg:text-4xl">{service.title}</h2>
 
                                 <PrimaryWhiteLink
                                     href={service.link ?? '#contacto'}

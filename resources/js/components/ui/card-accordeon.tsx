@@ -86,7 +86,7 @@ const CardAccordeon = ({ background, number, icon, title, description, isFirst }
 
             {/* Right side */}
             <div className="z-10 mt-18 flex max-w-60 flex-col justify-between gap-7 p-4 pl-6 md:mt-16 md:ml-2 md:max-w-full lg:mt-26 lg:max-w-90 lg:min-w-90 lg:gap-0 xl:max-w-100 xl:min-w-100 2xl:max-w-110 2xl:min-w-110">
-                <h3 className="font-space-grotesk text-4xl font-semibold text-white uppercase lg:text-5xl lg:leading-16 2xl:text-6xl">{title}</h3>
+                <h2 className="font-space-grotesk text-4xl font-semibold text-white uppercase lg:text-5xl lg:leading-16 2xl:text-6xl">{title}</h2>
 
                 <div className="font-space-grotesk text-white lg:text-xl xl:text-2xl">{HTMLReactParser(description)}</div>
             </div>

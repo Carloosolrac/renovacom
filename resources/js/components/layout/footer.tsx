@@ -84,7 +84,7 @@ const Footer = () => {
                     className="col-span-2 my-auto"
                 />
                 <div className="z-10 space-y-8 lg:mx-auto lg:w-1/2">
-                    <h3 className="text-xl font-semibold text-white">Navegación</h3>
+                    <h2 className="text-xl font-semibold text-white">Navegación</h2>
                     <nav>
                         <ul>
                             {navigationItems.map((item) => (
@@ -99,7 +99,7 @@ const Footer = () => {
                     </nav>
                 </div>
                 <div className="z-10 space-y-8 lg:mx-auto lg:w-1/2">
-                    <h3 className="text-xl font-semibold text-white">Contacto</h3>
+                    <h2 className="text-xl font-semibold text-white">Contacto</h2>
                     <ul role="list">
                         <li
                             role="listitem"
