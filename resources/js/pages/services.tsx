@@ -1,3 +1,4 @@
+import { Head } from '@inertiajs/react';
 import ArticlesSelector from '@/components/ui/articles-selector';
 import Banner from '@/components/ui/banner';
 import CardSlide from '@/components/ui/card-slide';
@@ -9,7 +10,6 @@ import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
 import type { BannerModel, CardSlideModel, ServiceArticleModel } from '@/types/models';
 import { getWidthClasses } from '@/utils/utils';
-import { Head } from '@inertiajs/react';
 
 interface ServiceProps {
     banner: BannerModel;
