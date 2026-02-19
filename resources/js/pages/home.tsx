@@ -1,3 +1,4 @@
+import { Head } from '@inertiajs/react';
 import { Fragment } from 'react/jsx-runtime';
 import { StarIcon } from '@/components/icons/icons';
 import HomeSectionProblem from '@/components/sections/home-section-problem';
@@ -28,11 +29,28 @@ interface HomeProps {
     otherServices: OtherServiceModel[];
     cardStatistics: CardStatisticModel[];
     partnerLogos: PartnerLogoModel[];
+    seo: {
+        title: string;
+        description: string;
+    };
+    article: {
+        image: string;
+        left_text: string;
+        right_text: string;
+    };
 }
 
-const Home = ({ banner, cardAccordeons, cardSlides, otherServices, cardStatistics, partnerLogos }: HomeProps) => {
+const Home = ({ banner, cardAccordeons, cardSlides, otherServices, cardStatistics, partnerLogos, seo, article }: HomeProps) => {
     return (
         <>
+            <Head>
+                <title>{seo.title}</title>
+                <meta
+                    name="description"
+                    content={seo.description}
+                />
+            </Head>
+
             <Banner
                 title={banner.title}
                 backgroundVideo={banner.background_video}
@@ -179,9 +197,9 @@ const Home = ({ banner, cardAccordeons, cardSlides, otherServices, cardStatistic
             <section className={cn('space-y-14', getWidthClasses())}>
                 <Title>Transformamos datos precisos en decisiones estratégicas</Title>
                 <ArticleDivision
-                    leftText="Nuestro servicio entrega precisión en la obtención y análisis de datos para una toma de decisiones fundamentada. Esto se traduce en un plan de mantenimiento optimizado que protege su inversión."
-                    rightText="Nuestro equipo cuenta con más de 12 años de experiencia en proyectos solares, eólicos y BESS, combinando criterio profesional y tecnología de vanguardia."
-                    image="/assets/home/background-article-transform.png"
+                    leftText={article.left_text}
+                    rightText={article.right_text}
+                    image={article.image}
                 />
             </section>
             <section className="bg-black-renovacom">

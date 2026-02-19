@@ -41,6 +41,13 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
+            'layout' => [
+                'linkedin' => config('social.linkedin'),
+                'instagram' => config('social.instagram'),
+                'email' => config('contact.email'),
+                'phone' => config('contact.phone'),
+                'phone_whatsapp' => config('contact.phone_whatsapp'),
+            ],
         ];
     }
 }

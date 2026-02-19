@@ -19,6 +19,15 @@ class HomeController extends Controller
             'otherServices' => $page->otherServices,
             'cardStatistics' => $page->cardStatistics,
             'partnerLogos' => $page->partnerLogos,
+            'seo' => [
+                'title' => setting('home.title'),
+                'description' => setting('home.description'),
+            ],
+            'article' => [
+                'image' => setting('home.article_image'),
+                'left_text' => setting('home.article_left_text'),
+                'right_text' => setting('home.article_right_text'),
+            ]
         ]);
     }
 }

@@ -14,6 +14,10 @@ class ServicesController extends Controller
             'banner' => $page->banner,
             'cardSlides' => $page->cardSlides ?? [],
             'serviceArticles' => $page->serviceArticles ?? [],
+            'seo' => [
+                'title' => setting('services.title'),
+                'description' => setting('services.description'),
+            ],
         ]);
     }
 }

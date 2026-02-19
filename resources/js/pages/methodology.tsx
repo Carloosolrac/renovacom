@@ -1,3 +1,4 @@
+import { Head } from '@inertiajs/react';
 import ArticleDivision from '@/components/ui/article-division';
 import Banner from '@/components/ui/banner';
 import CardAccordeonDown from '@/components/ui/card-accordeon-down';
@@ -12,29 +13,27 @@ import { getWidthClasses } from '@/utils/utils';
 interface MethodologyProps {
     banner: BannerModel;
     cardAccordeonDowns: CardAccordeonDownModel[];
+    seo: {
+        title: string;
+        description: string;
+    };
+    article: {
+        image: string;
+        left_text: string;
+        right_text: string;
+    };
 }
 
-const Methodology = ({ banner, cardAccordeonDowns }: MethodologyProps) => {
-    const articleRight = `<ul>
-    <li>
-        <strong>Reduce costos</strong> → intervenciones de mantenimiento solo donde son necesarias.
-    </li>
-    <br/>
-    <li>
-        <strong>Minimiza riesgos</strong> → anticipando fallos potenciales.
-    </li>
-    <br/>
-    <li>
-        <strong>Maximiza la vida útil</strong> → programa de mantenimiento basado en su condición real.
-    </li>
-</ul>`;
-    const articleLeft = `Nuestra metodología cierra la brecha entre la recolección de datos y la toma de decisiones. Entregamos un diagnóstico técnico ponderado y una hoja de ruta para la acción.
-    <br/>
-    <br/>
-El resultado final es una operación que pasa de ser reactiva a ser  <strong>predictiva y optimizada.</strong>`;
-
+const Methodology = ({ banner, cardAccordeonDowns, seo, article }: MethodologyProps) => {
     return (
         <>
+            <Head>
+                <title>{seo.title}</title>
+                <meta
+                    name="description"
+                    content={seo.description}
+                />
+            </Head>
             <Banner
                 title={banner.title}
                 buttonText={banner.button_text}
@@ -69,9 +68,9 @@ El resultado final es una operación que pasa de ser reactiva a ser  <strong>pre
             <section className={cn(getWidthClasses(), 'space-y-14')}>
                 <Title>Transformamos datos precisos en decisiones estratégicas</Title>
                 <ArticleDivision
-                    image="/assets/methodology/background-article-division.png"
-                    leftText={articleLeft}
-                    rightText={articleRight}
+                    image={article.image}
+                    leftText={article.left_text}
+                    rightText={article.right_text}
                 />
                 <div className="flex items-center justify-end">
                     <PrimaryBlackLink

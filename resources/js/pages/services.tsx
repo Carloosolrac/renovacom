@@ -9,16 +9,28 @@ import AppLayout from '@/layout/app-layout';
 import { cn } from '@/lib/utils';
 import type { BannerModel, CardSlideModel, ServiceArticleModel } from '@/types/models';
 import { getWidthClasses } from '@/utils/utils';
+import { Head } from '@inertiajs/react';
 
 interface ServiceProps {
     banner: BannerModel;
     cardSlides: CardSlideModel[];
     serviceArticles: ServiceArticleModel[];
+    seo: {
+        title: string;
+        description: string;
+    };
 }
 
-const Service = ({ banner, cardSlides, serviceArticles }: ServiceProps) => {
+const Service = ({ banner, cardSlides, serviceArticles, seo }: ServiceProps) => {
     return (
         <>
+            <Head>
+                <title>{seo.title}</title>
+                <meta
+                    name="description"
+                    content={seo.description}
+                />
+            </Head>
             <Banner
                 backgroundVideo={banner.background_video}
                 pretitle={banner.pretitle || undefined}
