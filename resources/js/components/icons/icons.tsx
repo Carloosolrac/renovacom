@@ -15,3 +15,4 @@ export const StarIcon = (props: React.SVGProps<SVGSVGElement>) => (
         />
     </svg>
 );
+

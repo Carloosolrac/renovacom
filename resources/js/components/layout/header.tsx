@@ -1,12 +1,12 @@
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
 import { Link, usePage } from '@inertiajs/react';
 import { useCallback, useState } from 'react';
-import { SharedData } from '@/types';
 import useNavigation from '@/hooks/useNavigation';
 import { cn } from '@/lib/utils';
 import { home } from '@/routes';
+import type { SharedData } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
-import { LinkedInIcon } from '../icons/logos';
+import { LinkedInIcon, WhatsappIcon } from '../icons/logos';
 import PrimaryLink from '../ui/primary-link';
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
         return current !== home.get().url ? 'bg-transparent border-white border-2' : 'bg-gray-renovacom';
     }, [current]);
 
-    const { linkedin } = usePage<SharedData>().props.layout;
+    const { linkedin, phone_whatsapp } = usePage<SharedData>().props.layout;
 
     const [toggleMenu, setToggleMenu] = useState(false);
     const handleToggleMenu = () => {
@@ -78,6 +78,17 @@ const Header = () => {
                             >
                                 <LinkedInIcon className="size-5 text-white transition-all hover:text-green-renovacom!" />
                             </a>
+                            {/* Whatsapp */}
+                            {phone_whatsapp && (
+                                <a
+                                    href={`https://wa.me/${phone_whatsapp}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Enlace Whatsapp"
+                                >
+                                    <WhatsappIcon className="size-6 fill-white transition-all hover:fill-green-renovacom!" />
+                                </a>
+                            )}
                         </li>
                         <li>
                             <PrimaryLink
@@ -156,6 +167,16 @@ const Header = () => {
                         >
                             <LinkedInIcon className="size-6 text-white" />
                         </a>
+                        {phone_whatsapp && (
+                            <a
+                                href={`https://wa.me/${phone_whatsapp}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Enlace Whatsapp"
+                            >
+                                <WhatsappIcon className="size-6 fill-white transition-all hover:fill-green-renovacom!" />
+                            </a>
+                        )}
                     </div>
                 </nav>
             </div>
