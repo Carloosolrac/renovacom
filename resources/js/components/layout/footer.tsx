@@ -1,8 +1,10 @@
+import { EnvelopeIcon } from '@heroicons/react/24/outline';
 import { Link, usePage } from '@inertiajs/react';
 import useNavigation from '@/hooks/useNavigation';
 import { cn } from '@/lib/utils';
 import type { SharedData } from '@/types';
 import { getWidthClasses } from '@/utils/utils';
+import { LinkedInIcon, WhatsappIcon } from '../icons/logos';
 
 const Footer = () => {
     const { navigationItems } = useNavigation();
@@ -100,18 +102,25 @@ const Footer = () => {
                 </div>
                 <div className="z-10 space-y-8 lg:mx-auto lg:w-1/2">
                     <h2 className="text-xl font-semibold text-white">Contacto</h2>
-                    <ul role="list">
+                    <ul
+                        role="list"
+                        className="flex items-center gap-7"
+                    >
                         <li
                             role="listitem"
                             className="mb-4 text-lg text-white hover:text-green-renovacom"
                         >
-                            <Link href={`mailto:${email || 'info@renovacom.cl'}`}>{email || 'info@renovacom.cl'}</Link>
+                            <a href={`mailto:${email || 'info@renovacom.cl'}`}>
+                                <EnvelopeIcon className="size-6 text-white hover:text-green-renovacom" />
+                            </a>
                         </li>
                         <li
                             role="listitem"
                             className="mb-4 text-lg text-white hover:text-green-renovacom"
                         >
-                            <a href={`tel:${(phone || '+56994712167').replace(/\s/g, '')}`}>{phone || '+56 9 9471 21 67'}</a>
+                            <a href={`https://wa.me/${(phone || '56994712167').replace(/\s/g, '')}`}>
+                                <WhatsappIcon className="size-6 fill-white hover:fill-green-renovacom" />
+                            </a>
                         </li>
                         <li
                             role="listitem"
@@ -123,7 +132,7 @@ const Footer = () => {
                                 target="_blank"
                                 aria-label="Enlace LinkedIn"
                             >
-                                LinkedIn
+                                <LinkedInIcon className="size-5 fill-white" />
                             </a>
                         </li>
                     </ul>
