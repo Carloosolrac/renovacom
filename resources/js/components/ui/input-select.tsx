@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 interface InputSelectProps {
@@ -13,10 +13,29 @@ interface InputSelectProps {
 const InputSelect = ({ options, value, onChange, placeholder, className, id }: InputSelectProps) => {
     const [toggle, setToggle] = useState(false);
 
+    const containerRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        if (!toggle || !containerRef.current) return;
+
+        const onClick = (event: PointerEvent) => {
+            if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+                setToggle(false);
+            }
+        };
+
+        window.addEventListener('click', onClick);
+
+        return () => {
+            window.removeEventListener('click', onClick);
+        };
+    }, [toggle]);
+
     return (
         <div
             className="relative"
             id={id}
+            ref={containerRef}
         >
             <button
                 type="button"
@@ -39,7 +58,10 @@ const InputSelect = ({ options, value, onChange, placeholder, className, id }: I
                             key={option.value}
                             role="option"
                             className="cursor-pointer px-5 py-4 text-white hover:bg-gray-renovacom"
-                            onClick={() => onChange(option.value)}
+                            onClick={() => {
+                                onChange(option.value);
+                                setToggle(false);
+                            }}
                         >
                             {option.label}
                         </li>
